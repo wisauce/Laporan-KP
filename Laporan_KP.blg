@@ -1,19 +1,19 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'Laporan_KP.blg'
-[231] biber-MSWIN64:342> INFO - === 
-[324] Biber.pm:421> INFO - Reading 'Laporan_KP.bcf'
-[439] Biber.pm:1002> INFO - Found 2 citekeys in bib section 0
-[457] Biber.pm:4487> INFO - Processing section 0
-[480] Biber.pm:4678> INFO - Looking for bibtex file 'daftar-pustaka.bib' for section 0
-[518] bibtex.pm:1713> INFO - LaTeX decoding ...
-[542] bibtex.pm:1519> INFO - Found BibTeX data source 'daftar-pustaka.bib'
-[623] UCollate.pm:68> INFO - Overriding locale 'indonesian' defaults 'variable = shifted' with 'variable = non-ignorable'
-[623] UCollate.pm:68> INFO - Overriding locale 'indonesian' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[624] Biber.pm:4307> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'indonesian'
-[624] Biber.pm:4313> INFO - No sort tailoring available for locale 'indonesian'
-[632] UCollate.pm:68> INFO - Overriding locale 'indonesian' defaults 'variable = shifted' with 'variable = non-ignorable'
-[632] UCollate.pm:68> INFO - Overriding locale 'indonesian' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[632] Biber.pm:4307> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'indonesian'
-[633] Biber.pm:4313> INFO - No sort tailoring available for locale 'indonesian'
-[635] bbl.pm:676> INFO - Writing 'Laporan_KP.bbl' with encoding 'UTF-8'
-[638] bbl.pm:779> INFO - Output to Laporan_KP.bbl
+[93] biber-MSWIN64:342> INFO - === 
+[122] Biber.pm:421> INFO - Reading 'Laporan_KP.bcf'
+[232] Biber.pm:1002> INFO - Found 2 citekeys in bib section 0
+[250] Biber.pm:4487> INFO - Processing section 0
+[261] Biber.pm:4678> INFO - Looking for bibtex file 'daftar-pustaka.bib' for section 0
+[299] bibtex.pm:1713> INFO - LaTeX decoding ...
+[316] bibtex.pm:1519> INFO - Found BibTeX data source 'daftar-pustaka.bib'
+[362] UCollate.pm:68> INFO - Overriding locale 'indonesian' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[362] UCollate.pm:68> INFO - Overriding locale 'indonesian' defaults 'variable = shifted' with 'variable = non-ignorable'
+[363] Biber.pm:4307> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'indonesian'
+[363] Biber.pm:4313> INFO - No sort tailoring available for locale 'indonesian'
+[373] UCollate.pm:68> INFO - Overriding locale 'indonesian' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[373] UCollate.pm:68> INFO - Overriding locale 'indonesian' defaults 'variable = shifted' with 'variable = non-ignorable'
+[373] Biber.pm:4307> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'indonesian'
+[374] Biber.pm:4313> INFO - No sort tailoring available for locale 'indonesian'
+[376] bbl.pm:676> INFO - Writing 'Laporan_KP.bbl' with encoding 'UTF-8'
+[379] bbl.pm:779> INFO - Output to Laporan_KP.bbl

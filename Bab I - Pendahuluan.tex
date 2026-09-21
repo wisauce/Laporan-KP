@@ -1,25 +1,54 @@
 \cleardoublepage % memastikan bab baru dimulai di halaman ganjil (kanan)
 \chapter{PENDAHULUAN}
 \label{chap:pendahuluan}
+
 % --- Latar Belakang ---
 \section{Latar Belakang}
 \label{sec:latar_belakang}
-Tuliskanlah latar belakang dari pelaksanaan kerja praktik (KP) di perusahaan dan substansi yang digeluti berkaitan dengan tujuan, misi, visi atau fungsi perusahaan. Jelaskan pula alasan mengapa perusahaan tersebut dipilih sebagai tempat pelaksanaan kerja praktik.
+Kerja praktik (KP) merupakan mata kuliah wajib yang memberikan kesempatan kepada mahasiswa untuk memperoleh pengalaman profesional di dunia industri.
+Penulis melaksanakan KP di PT Paragon Technology and Innovation, perusahaan kecantikan asal Indonesia yang tergolong salah satu pelaku terbesar di industri tersebut, dengan tingkat kematangan teknologi yang mapan sekaligus sedang berkembang pesat dalam transformasi digital.
+Lingkungan tersebut dinilai relevan bagi penulis karena memadukan skala operasional perusahaan, penerapan sistem informasi skala korporat, dan peluang terlibat dalam proyek inovatif berbasis akal imitasi (AI).
 
-Untuk menuliskan paragraf berikutnya berikan jarak seperti contoh pada template ini. Sebuah paragraf hendaknya mengandung satu pokok pikiran dan beberapa kalimat gagasan pendukung.
-Paragraf berikutnya dapat dituliskan di sini. Pastikan setiap paragraf memiliki kesatuan ide yang jelas dan mendukung topik utama dari latar belakang kerja praktik ini.
+Paragon bertujuan menciptakan kebaikan yang lebih besar bagi masyarakat melalui inovasi, dengan visi mewujudkan tata kelola perusahaan terbaik dan perbaikan berkelanjutan agar setiap hari lebih baik dari hari sebelumnya.
+Beberapa misi perusahaan yang relevan dengan pekerjaan KP penulis antara lain \textit{Continuous Improvement}, yakni terus berinovasi dalam setiap proses untuk meningkatkan kualitas, serta \textit{Grow Together}, yakni bekerja sama secara utuh untuk bertumbuh bersama.
+Substansi tersebut diwujudkan melalui pengembangan sistem informasi yang mendukung proses pertukaran faktur dengan pemasok, sebab kelancaran hubungan dengan mitra bisnis dan efisiensi proses operasional merupakan bagian dari fungsi perusahaan dalam menjalankan rantai pasok dan kepatuhan keuangan.
+
+Dalam operasional pengadaan barang dan jasa, perusahaan wajib memenuhi kewajiban pemotongan Pajak Penghasilan (PPh) pada transaksi pembelian.
+Tarif PPh ditentukan melalui pemetaan atribut-atribut tertentu pada sistem perusahaan, salah satunya jenis material.
+Jenis material digunakan untuk mengelompokkan barang atau jasa yang dibeli agar dapat dipetakan ke tarif pajak yang sesuai.
+Namun, jumlah jenis material di perusahaan sangat banyak dan cukup teknis sehingga sulit dipahami oleh seluruh pengguna.
+Akibatnya, karyawan yang membuat \textit{Purchase Order} (PO) kerap kali salah memilih jenis material, sehingga tarif PPh yang tercatat tidak sesuai dengan karakteristik transaksi sebenarnya.
+
+Ketidaksesuaian tarif PPh berdampak pada proses pertukaran faktur (\textit{invoice exchange}) antara perusahaan dan pemasok, karena dapat menimbulkan koreksi manual, penundaan pembayaran, dan risiko ketidakpatuhan perpajakan.
+Lebih jauh lagi, kesalahan tersebut berpotensi menimbulkan kerugian finansial berupa selisih jumlah pemotongan pajak, biaya penanganan ulang transaksi, gangguan arus kas, serta risiko sanksi atau denda apabila tidak segera dikoreksi.
+Hal ini berkontradiksi dengan komitmen perusahaan terhadap tata kelola perusahaan terbaik dan hubungan kerja yang saling menguntungkan dengan mitra bisnis.
+Meskipun sumber masalah utamanya terletak pada proses pembuatan PO, perbaikan langsung pada tahap tersebut sulit dilakukan karena berada di luar cakupan kerja divisi penulis dan memerlukan \textit{change management} lintas unit kerja.
+
+Oleh karena itu, diperlukan solusi alternatif yang selaras dengan semangat inovasi dan perbaikan berkelanjutan perusahaan, tanpa mengubah alur pembuatan PO yang sudah mapan.
+Berdasarkan kebutuhan tersebut, penulis mengembangkan Sistem Koreksi Tarif Pajak Penghasilan Berbasis Akal Imitasi (AI) pada \textit{Web Tukar Faktur}.
+Sistem ini dirancang untuk menganalisis data faktur dan konteks transaksi, lalu memberikan rekomendasi atau koreksi tarif PPh sehingga kesalahan akibat pemilihan material yang keliru dapat ditangani pada tahap pertukaran faktur.
+Melalui peran sebagai \textit{software engineer intern}, penulis turut mendukung misi pengembangan kompetensi (\textit{Developing Paragonians}) sekaligus menerapkan ilmu dari Program Studi Sistem dan Teknologi Informasi dalam analisis proses bisnis, perancangan arsitektur perangkat lunak, pengembangan \textit{backend}, dan penerapan teknologi AI untuk menyelesaikan permasalahan operasional perusahaan.
 
 \section{Tempat dan Waktu Pelaksanaan}
 \label{sec:tempat_waktu}
-Tuliskan nama perusahaan tempat pelaksanaan kerja praktik beserta alamat lengkapnya. Jelaskan juga periode pelaksanaan kerja praktik, termasuk tanggal mulai dan tanggal selesai.
+Kerja praktik dilaksanakan di PT Paragon Technology and Innovation, Gedung Nomor 3, Jalan Kampung Baru IV Nomor 1, RT 005/RW 002, Ulujami, Kecamatan Pesanggrahan, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12250.
+
+Pelaksanaan kerja praktik berlangsung selama 6 (enam) minggu, dari tanggal 2 Juni 2026 hingga 14 Juli 2026.
+Penulis menjalankan kerja praktik secara luring dengan jam kerja 40 jam per minggu.
 
 \section{Ruang Lingkup Kerja Praktik}
-Tuliskan ruang lingkup kerja praktik yang dikerjakan di perusahaan, termasuk bidang atau area kerja yang menjadi fokus utama selama pelaksanaan KP. Jelaskan juga tugas-tugas atau proyek-proyek spesifik yang ditangani selama kerja praktik berlangsung.
-Deskripsi pekerjaan yang lengkap dapat dijelaskan di Bab \ref{chap:judul-pekerjaan}.
+\label{sec:ruang_lingkup}
+Ruang lingkup kerja praktik difokuskan pada pengembangan subsistem Sistem Koreksi Tarif Pajak Penghasilan Berbasis Akal Imitasi (AI) pada \textit{Web Tukar Faktur}.
+Peran utama penulis meliputi lima tahapan, yaitu (1) memahami proses tukar faktur beserta alur kerja dan peran masing-masing pihak; (2) mengidentifikasi \textit{pain points} operasional, khususnya kesalahan tarif PPh akibat pemilihan jenis material yang keliru; (3) menentukan ruang lingkup (\textit{scope}) sistem AI yang layak dikembangkan dengan mempertimbangkan keterbatasan teknis dan organisasi; (4) melakukan eksplorasi solusi serta merancang \textit{proof of concept} (POC) sebagai bukti kelayakan pendekatan berbasis AI; dan (5) ikut mengembangkan sistem \textit{backend} agar dapat digunakan pada lingkungan \textit{production}.
+
+Dalam pelaksanaannya, penulis terlibat mulai dari analisis kebutuhan dan perancangan arsitektur sistem, integrasi layanan AI untuk pemrosesan dokumen faktur, penyusunan mekanisme rekomendasi dan koreksi tarif PPh, hingga pengujian fungsional subsistem yang dikembangkan.
+Pekerjaan di luar cakupan kerja praktik, seperti perubahan langsung pada modul pembuatan PO dan kebijakan perpajakan perusahaan, tidak menjadi tanggung jawab penulis.
+
+Deskripsi pekerjaan yang lebih rinci, termasuk tahapan pengembangan, tantangan teknis, dan keputusan desain yang diambil, diuraikan pada Bab \ref{chap:judul-pekerjaan}.
 
 \section{Sistematika Penulisan}
-Tuliskan sistematika penulisan laporan kerja praktik ini. Jelaskan secara singkat isi dari setiap bab yang ada dalam laporan ini, sehingga pembaca dapat memahami struktur dan alur penyajian laporan kerja praktik secara keseluruhan.
-Misalnya:
+Laporan kerja praktik ini disusun dalam empat bab utama dan lampiran pendukung.
+Susunan laporan dijelaskan sebagai berikut.
 \begin{itemize}
     \item Bab I Pendahuluan: Berisi latar belakang, tempat dan waktu pelaksanaan, ruang lingkup kerja praktik, dan sistematika penulisan laporan.
     \item Bab II Organisasi dan Lingkungan Kerja Praktik: Menjelaskan profil perusahaan, struktur organisasi, dan lingkungan kerja di perusahaan tempat pelaksanaan kerja praktik.
@@ -27,4 +56,3 @@ Misalnya:
     \item Bab IV Penutup: Menyajikan ringkasan hasil kerja praktik dan pengalaman yang diperoleh.
     \item Lampiran: Berisi dokumen pendukung seperti foto, diagram, atau data lain yang relevan dengan kerja praktik.
 \end{itemize}
-Pastikan setiap bab dijelaskan secara singkat namun jelas agar pembaca dapat memahami isi laporan kerja praktik secara keseluruhan.

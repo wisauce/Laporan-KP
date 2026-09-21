@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.8.19)  19 AUG 2026 11:41
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.8.19)  21 SEP 2026 08:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1059,7 +1059,7 @@ Package csquotes Info: Redefining alias 'default' -> 'fallback'.
 (C:\Users\wiseo\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel
 -english.tex)
 Package babel Info: Importing data for english
-(babel)             from babel-en.ini. Reported on input line 81.
+(babel)             from babel-en.ini. Reported on input line 82.
 )
 \openout1 = `Laporan_KP.aux'.
 
@@ -1404,12 +1404,20 @@ Bab I.
 [1
 
 
-]) (Bab II - Organisasi dan Lingkungan.tex [2]
+] [2]) (Bab II - Organisasi dan Lingkungan.tex [3] [4
+
+]
 Bab II.
-[3
+[5
 
+]
+Underfull \vbox (badness 3058) has occurred while \output is active []
 
-]) (Bab III - Pekerjaan.tex [4]
+ [6]
+Underfull \vbox (badness 3989) has occurred while \output is active []
+
+ [7])
+(Bab III - Pekerjaan.tex [8]
 Bab III.
 
 Overfull \hbox (15.8258pt too wide) in paragraph at lines 8--9
@@ -1417,7 +1425,7 @@ Overfull \hbox (15.8258pt too wide) in paragraph at lines 8--9
  motivasi, masalah, keputusan-
  []
 
-[5
+[9
 
 
 ]
@@ -1428,13 +1436,13 @@ Overfull \hbox (1.58914pt too wide) in paragraph at lines 24--25
 
 File: images/gambar1.png Graphic file (type bmp)
 <images/gambar1.png>
-[6]
+[10]
 File: images/gambar1.png Graphic file (type bmp)
 <images/gambar1.png>
- [7]
+ [11]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8]
+ [12]
 Underfull \hbox (badness 2119) in paragraph at lines 107--107
 [][]|\TU/TimesNewRoman(0)/m/n/12 Contoh tabel yang menggunakan \TU/lmtt/m/n/12 
 tabularx \TU/TimesNewRoman(0)/m/n/12 untuk mengatur lebar
@@ -1446,12 +1454,12 @@ Underfull \hbox (badness 2547) in paragraph at lines 107--107
 menggunakan
  []
 
-(tables/tabel1.tex) (tables/longtable1.tex [9]
-ignored error: Infinite glue shrinkage found in box being split [10]
-ignored error: Infinite glue shrinkage found in box being split [11])
+(tables/tabel1.tex) (tables/longtable1.tex [13]
+ignored error: Infinite glue shrinkage found in box being split [14]
+ignored error: Infinite glue shrinkage found in box being split [15])
 Underfull \vbox (badness 7558) has occurred while \output is active []
 
- [12]
+ [16]
 (listings/binary-search-python.tex
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 7.
@@ -1466,29 +1474,29 @@ put line 4.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13]))
-(Bab IV - Penutup.tex [14] [15] [16
+ [17]))
+(Bab IV - Penutup.tex [18] [19] [20
 
 ]
 Bab IV.
-) [17
+) [21
 
-] [18
+] [22
 
-] (Lampiran-A.tex [19
+] (Lampiran-A.tex [23
 
-] [20
+] [24
 
 ]
 Lampiran A.
-(listings/binary-search-python.tex [21
+(listings/binary-search-python.tex [25
 
-])) (Lampiran-B.tex [22]
+])) (Lampiran-B.tex [26]
 Lampiran B.
-) [23
+) [27
 
 
-] [24
+] [28
 
 ] (Laporan_KP.aux)
  ***********
@@ -1502,12 +1510,12 @@ Package logreq Info: Writing requests to 'Laporan_KP.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33229 strings out of 402987
- 638402 string characters out of 5448524
- 1944709 words of memory out of 5000000
- 61498 multiletter control sequences out of 15000+600000
+ 33232 strings out of 402987
+ 638475 string characters out of 5448524
+ 1944770 words of memory out of 5000000
+ 61501 multiletter control sequences out of 15000+600000
  634673 words of font info for 98 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  88i,12n,109p,1201b,7079s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Laporan_KP.pdf (50 pages).
+Output written on Laporan_KP.pdf (54 pages).

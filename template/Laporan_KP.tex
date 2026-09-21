@@ -1,0 +1,110 @@
+% !TeX root = Laporan_KP.tex
+%
+% Versi 1.0 (menggunakan kelas KP.cls)
+%
+% Template Laporan KP
+% Program Studi Sistem dan Teknologi Informasi
+% Sekolah Teknik Elektro dan Informatika
+% Institut Teknologi Bandung
+%
+% Dibuat oleh: IGB Baskara Nugraha
+% Email: baskara@itb.ac.id
+%
+% Petunjuk penggunaan:
+% 1. Ada 3 berkas utama: Laporan_KP.tex (berkas ini), laporankp.cls (kelas
+%    dokumen berisi seluruh pengaturan format), dan daftar-pustaka.bib
+%    (berkas daftar pustaka).
+% 2. Sunting setiap file .tex sesuai dengan kebutuhan Anda.
+% 3. Sunting atau generate isi daftar-pustaka.bib dengan referensi yang Anda
+%    gunakan, sesuai dengan format BibLaTeX.
+% 4. Simpan ketiga berkas tersebut (dan berkas .tex bab lainnya) dalam satu
+%    folder yang sama.
+% 5. Kompilasi file Laporan_KP.tex menggunakan XeLaTeX dan Biber (lihat
+%    urutan cara kompilasi di bawah).
+% 6. Hasil kompilasi adalah file Laporan_KP.pdf yang siap dicetak.
+%
+% Urutan cara kompilasi (melalui command line):
+% 1. xelatex Laporan_KP.tex
+% 2. biber Laporan_KP
+% 3. xelatex Laporan_KP.tex
+% 4. xelatex Laporan_KP.tex
+%
+% Catatan:
+% - Pastikan Anda telah menginstal paket-paket LaTeX yang diperlukan, termasuk
+%   biblatex-chicago dan fontspec.
+% - Gunakan editor LaTeX yang mendukung XeLaTeX, seperti TeXstudio, Overleaf, atau lainnya.
+% - Seluruh pengaturan tampilan dokumen (font, margin, judul bab, daftar isi,
+%   dsb.) kini berada di dalam berkas kelas "KP.cls". Sunting berkas
+%   tersebut jika Anda ingin mengubah format dokumen.
+%
+% NOTE: Abaikan error di longtable tentang infinite glue shrinkage. Ini bukan error yang mengganggu.
+%
+\documentclass{KP}
+
+% --- Daftar Pustaka: Baca file yang berisi daftar pustaka ---
+\addbibresource{daftar-pustaka.bib}
+
+% ==========================================
+% AWAL DOKUMEN
+% ==========================================
+\begin{document}
+
+% ==========================================
+% HALAMAN AWAL (FRONTMATTER)
+% ==========================================
+\frontmatter
+% --- Daftar Isi: Tampilan daftar isi untuk bagian frontmatter ---
+\frontmatterToc
+
+% --- File: berikan tanda comment (%) pada baris \input di bawah ini jika tidak digunakan ---
+\input{01 Halaman Judul.tex}
+\input{02 Lembar Pengesahan.tex}
+\input{03 Lembar Pernyataan.tex}
+\input{04 Abstrak.tex}
+\input{05 Kata Pengantar.tex}
+\input{06 Daftar Isi.tex}
+%\input{07 Daftar Lampiran.tex} % Optional. Daftar lampiran sudah ada di dalam daftar isi.
+\input{08 Daftar Gambar.tex}
+\input{09 Daftar Tabel.tex}
+\input{10 Daftar Algoritma.tex}
+\input{11 Daftar Listing.tex}
+\input{12 Daftar Singkatan.tex}
+\input{13 Daftar Simbol.tex}
+
+% ==========================================
+% BAGIAN UTAMA DOKUMEN (MAINMATTER)
+% ==========================================
+\mainmatter
+% --- Daftar Isi: Tampilan daftar isi untuk bagian mainmatter ---
+\mainmatterToc
+
+\input{Bab I - Pendahuluan.tex}
+
+\input{Bab II - Organisasi dan Lingkungan.tex}
+
+\input{Bab III - Pekerjaan.tex}
+
+\input{Bab IV - Penutup.tex}
+
+
+
+
+% ==========================================
+% DAFTAR PUSTAKA (Cetak isi daftar pustaka)
+% ==========================================
+\cleardoublepage
+\printbibliography[title={DAFTAR PUSTAKA}]
+
+% ==========================================
+% LAMPIRAN (optional)
+% ==========================================
+\appendix
+
+% --- Lampiran: Berikan tanda comment (%) pada baris \input di bawah ini jika tidak digunakan
+\begin{appendices}
+\input{Lampiran-A.tex}
+\input{Lampiran-B.tex}
+\end{appendices}
+\backmatter
+
+\end{document}
