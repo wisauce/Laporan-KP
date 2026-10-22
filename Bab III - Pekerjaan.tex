@@ -84,7 +84,7 @@ Berdasarkan informasi tersebut, sistem diharapkan dapat menghasilkan rekomendasi
 Rekomendasi ini ditujukan untuk menilai kesesuaian data transaksi, terutama ketika \textit{material group} yang tercatat tidak selaras dengan barang atau jasa pada faktur.
 
 Tingkat keyakinan digunakan untuk menentukan mekanisme tindak lanjut terhadap suatu faktur.
-Apabila sistem menghasilkan rekomendasi dengan tingkat keyakinan tinggi sesuai ambang batas yang ditetapkan, faktur dapat disetujui tanpa memerlukan campur tangan AP.
+Apabila sistem menghasilkan rekomendasi dengan tingkat keyakinan tinggi sesuai ambang batas yang ditetapkan, faktur dapat diteruskan ke proses \textit{autopost} tanpa memerlukan campur tangan AP.
 Sebaliknya, faktur dengan tingkat keyakinan yang belum memadai tetap diteruskan kepada AP untuk diperiksa dan, apabila diperlukan, ditinjau lebih lanjut oleh pihak perpajakan.
 Dengan mekanisme tersebut, sistem secara parsial menggantikan pemeriksaan manual AP pada transaksi yang memiliki tingkat keyakinan tinggi, sambil tetap menyediakan pemeriksaan manusia bagi transaksi yang memerlukan pertimbangan lebih lanjut.
 
@@ -94,7 +94,7 @@ Perubahan terhadap aturan pemetaan \textit{WHT code} yang telah berlaku di SAP, 
 Pembatasan ini ditetapkan karena proses tersebut berada di luar cakupan unit kerja penulis dan perubahan pada proses tersebut membutuhkan \textit{change management} lintas unit.
 
 Dengan batasan tersebut, keluaran yang diharapkan dari pekerjaan ini adalah suatu kemampuan pada \textit{Web Tukar Faktur} untuk menilai kesesuaian \textit{WHT code} terhadap substansi transaksi sebelum pembukuan jurnal dilakukan.
-Kemampuan tersebut diharapkan dapat menyetujui secara otomatis faktur dengan rekomendasi berkeyakinan tinggi, mengarahkan kasus lain kepada AP untuk diperiksa, mengurangi kebutuhan koreksi manual pada tahap akhir proses, dan membantu menjaga ketepatan kategori PPh yang digunakan dalam perhitungan pajak.
+Kemampuan tersebut diharapkan dapat meneruskan faktur dengan rekomendasi berkeyakinan tinggi ke proses \textit{autopost}, mengarahkan kasus lain kepada AP untuk diperiksa, mengurangi kebutuhan koreksi manual pada tahap akhir proses, dan membantu menjaga ketepatan kategori PPh yang digunakan dalam perhitungan pajak.
 
 \subsection{\textit{Exploratory Data Analysis} dan Perumusan Pendekatan}
 \label{subsec:eda_perumusan_pendekatan}
@@ -139,3 +139,43 @@ Berdasarkan hasil EDA dan validasi dengan tim keuangan, pendekatan sistem diubah
 Aturan berbasis kondisi digunakan lebih dahulu untuk membatasi kandidat \textit{WHT code}, kemudian LLM mengklasifikasikan jenis objek pajak berdasarkan konteks item faktur dalam ruang kandidat tersebut.
 Hasil klasifikasi selanjutnya digunakan untuk menentukan rekomendasi \textit{WHT code} yang sesuai.
 Pendekatan ini mengurangi ruang klasifikasi, menghindari ketergantungan pada kategori \textit{material group} yang ambigu, dan menekan biaya pemrosesan LLM.
+
+\subsection{Perancangan Arsitektur Sistem dan Strategi Klasifikasi}
+\label{subsec:perancangan_arsitektur_strategi_klasifikasi}
+
+Setelah pendekatan klasifikasi berdasarkan jenis objek pajak ditetapkan, tahap berikutnya adalah merancang alur pemrosesan sistem secara menyeluruh.
+Sistem dirancang terdiri atas dua subsistem, yaitu subsistem ekstraksi informasi faktur dan subsistem klasifikasi \textit{WHT code}.
+Subsistem ekstraksi informasi faktur bertugas mengubah dokumen faktur menjadi informasi yang dapat digunakan oleh sistem, sedangkan subsistem klasifikasi menggunakan informasi tersebut bersama atribut transaksi dan aturan hasil EDA untuk menghasilkan rekomendasi \textit{WHT code} serta tingkat keyakinannya.
+
+Secara teoretis, citra faktur mentah dapat langsung diberikan sebagai konteks kepada sistem klasifikasi.
+Namun, pendekatan tersebut berisiko menghasilkan pemahaman visual yang kurang memadai apabila model klasifikasi yang digunakan berukuran lebih ringan.
+Selain itu, pemrosesan citra memerlukan token dengan biaya yang lebih tinggi daripada pemrosesan teks.
+Oleh karena itu, pemisahan subsistem diperlukan agar proses klasifikasi menggunakan informasi faktur yang telah diekstraksi dalam bentuk terstruktur dan berbasis teks.
+
+Pada tahap awal, penulis mengeksplorasi \textit{UnlimitedOCR}, model OCR sumber terbuka dari Baidu yang menjadi salah satu model terkini pada saat eksplorasi dilakukan.
+Hasil uji coba menunjukkan bahwa model tersebut dapat digunakan untuk mengekstraksi informasi dari faktur, tetapi kecepatan keluarannya cenderung lambat dan pengoperasiannya memerlukan lingkungan peladen dengan GPU yang memadai.
+Meskipun Paragon memiliki sumber daya tersebut, kebutuhan bisnis mengutamakan kecepatan penyampaian solusi.
+Oleh sebab itu, digunakan layanan OCR berbasis API dengan skema \textit{pay-as-you-go}, yaitu AWS Textract yang telah dilanggan oleh Paragon.
+Pemilihan ini memungkinkan subsistem ekstraksi informasi dikembangkan tanpa menunggu penyediaan dan pengoperasian infrastruktur GPU khusus.
+
+Keluaran subsistem ekstraksi informasi digunakan sebagai konteks bagi LLM untuk mengklasifikasikan jenis objek pajak dan menentukan rekomendasi \textit{WHT code} dari kandidat yang telah disaring oleh aturan berbasis kondisi.
+Pada tahap ini, perancangan prompt menjadi penting karena teks hasil OCR pada faktur dapat bersifat ambigu.
+Sebagai contoh, suatu faktur mencantumkan nama barang \textit{Workout Stool}.
+Tanpa konteks tambahan, model dapat mengklasifikasikannya sebagai material, padahal transaksi tersebut merupakan sewa perlengkapan untuk suatu kegiatan.
+Untuk mengurangi kesalahan semacam ini, penulis berdiskusi kembali dengan tim keuangan untuk menyusun instruksi prompt dan contoh klasifikasi yang lebih tepat.
+Meskipun tidak seluruh ambiguitas dapat dihilangkan, penambahan konteks dari tim keuangan diharapkan dapat memperkecil kemungkinan misklasifikasi.
+
+Komponen penting lainnya adalah perancangan \textit{confidence score} karena skor ini menentukan apakah suatu faktur perlu diperiksa oleh AP atau dapat diteruskan ke proses \textit{autopost} setelah dinilai oleh sistem.
+Rancangan awal meminta LLM menghasilkan satu angka antara 0 dan 1 yang merepresentasikan tingkat keyakinannya.
+Pendekatan tersebut dipandang kurang memadai karena angka yang dihasilkan merupakan penilaian verbal LLM, bukan probabilitas yang langsung dihitung dari \textit{logit} model.
+Hasil riset penulis mengenai \textit{verbalized confidence score} menunjukkan bahwa keandalan skor keyakinan verbal dari LLM sangat dipengaruhi oleh cara model diminta menghasilkan skor tersebut.
+
+Berdasarkan temuan tersebut, tingkat keyakinan tidak lagi diminta sebagai satu penilaian tunggal.
+Penulis dan tim keuangan mengidentifikasi sejumlah parameter yang relevan untuk menilai keyakinan LLM terhadap hasil klasifikasi.
+LLM diminta menilai setiap parameter secara terpisah, kemudian seluruh parameter diberi bobot yang sama untuk membentuk skor akhir pada rentang 0 hingga 1.
+Apabila terdapat $n$ parameter dengan skor terstandardisasi $s_i$, skor keyakinan akhir dirumuskan sebagai berikut.
+\begin{equation}
+    C = \frac{1}{n} \sum_{i=1}^{n} s_i
+    \label{eq:confidence-score}
+\end{equation}
+Pendekatan ini memberikan dasar penilaian yang lebih terstruktur untuk menentukan jalur pemrosesan faktur, yaitu \textit{autopost} bagi skor yang memenuhi ambang batas dan pemeriksaan AP bagi skor lainnya.
