@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.8.19)  21 SEP 2026 08:24
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.8.19)  22 OCT 2026 21:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1055,12 +1055,7 @@ Package csquotes Warning: No style for language 'indonesian'.
 (csquotes)                Using fallback style on input line 50.
 
 Package csquotes Info: Redefining alias 'default' -> 'fallback'.
-(Laporan_KP.aux
-(C:\Users\wiseo\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel
--english.tex)
-Package babel Info: Importing data for english
-(babel)             from babel-en.ini. Reported on input line 82.
-)
+(Laporan_KP.aux)
 \openout1 = `Laporan_KP.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
@@ -1238,38 +1233,6 @@ Package biblatex Info: ... file 'indonesian.lbx' not found.
 Package biblatex Warning: Language 'indonesian' not supported.
 (biblatex)                Using dummy definitions on input line 50.
 
-Package biblatex Info: Trying to load language 'english' -> 'english-apa'...
-Package biblatex Info: ... file 'english-apa.lbx' found.
-
-(C:\Users\wiseo\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-apa\english-ap
-a.lbx
-File: english-apa.lbx 2025/08/27 v9.20 APA biblatex localisation
-Package biblatex Info: Trying to load language 'english'...
-Package biblatex Info: ... file 'english.lbx' found.
-
-(C:\Users\wiseo\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\english.lb
-x
-File: english.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
-)
-Package biblatex Info: Trying to load language 'american' -> 'american-apa'...
-Package biblatex Info: ... file 'american-apa.lbx' found.
-
-(C:\Users\wiseo\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-apa\american-a
-pa.lbx
-File: american-apa.lbx 2025/08/27 v9.20 APA biblatex localisation
-Package biblatex Info: Trying to load language 'american'...
-Package biblatex Info: ... file 'american.lbx' found.
-
-(C:\Users\wiseo\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\american.l
-bx
-File: american.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
-Package biblatex Info: Trying to load language 'english'...
-Package biblatex Info: ... file 'english.lbx' found.
-
-(C:\Users\wiseo\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\english.lb
-x
-File: english.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
-))))
 Package biblatex Info: XeTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
 Package biblatex Info: Automatic encoding selection.
@@ -1278,7 +1241,7 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Laporan_KP.bbl' found.
- (Laporan_KP.bbl)
+(Laporan_KP.bbl)
 Package biblatex Info: Reference section=0 on input line 50.
 Package biblatex Info: Reference segment=0 on input line 50.
  (01 Halaman Judul.tex
@@ -1333,7 +1296,7 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 [9] [10
 
 ] (Laporan_KP.toc
-Underfull \vbox (badness 1127) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11])
 \tf@toc=\write5
@@ -1349,18 +1312,7 @@ Underfull \vbox (badness 1127) has occurred while \output is active []
 ] [14
 
 ]
-(Laporan_KP.lot
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmtt' (encoding: TU).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
-Overfull \hbox (58.8302pt too wide) in paragraph at lines 15--15
- \TU/TimesNewRoman(0)/m/n/12 kolom secara fleksibel. Selain itu, tabel ini juga
- menggunakan \TU/lmtt/m/n/12 threeparttable 
- []
-
-)
+(Laporan_KP.lot)
 \tf@lot=\write7
 \openout7 = `Laporan_KP.lot'.
 
@@ -1370,8 +1322,8 @@ Overfull \hbox (58.8302pt too wide) in paragraph at lines 15--15
 \tf@loa=\write8
 \openout8 = `Laporan_KP.loa'.
 
-) (11 Daftar Listing.tex
-[17
+)
+(11 Daftar Listing.tex [17
 
 ] [18
 
@@ -1379,7 +1331,8 @@ Overfull \hbox (58.8302pt too wide) in paragraph at lines 15--15
 \tf@lol=\write9
 \openout9 = `Laporan_KP.lol'.
 
-) (12 Daftar Singkatan.tex [19
+) (12 Daftar Singkatan.tex
+[19
 
 ] [20
 
@@ -1419,84 +1372,44 @@ Underfull \vbox (badness 3989) has occurred while \output is active []
  [7])
 (Bab III - Pekerjaan.tex [8]
 Bab III.
-
-Overfull \hbox (15.8258pt too wide) in paragraph at lines 8--9
-\TU/TimesNewRoman(0)/m/n/12 ini sejak inisiasi hingga penyelesaiannya, termasuk
- motivasi, masalah, keputusan-
- []
-
 [9
 
 
-]
-Overfull \hbox (1.58914pt too wide) in paragraph at lines 24--25
-\TU/TimesNewRoman(0)/m/n/12 aktivitas orang yang menggunakan teknologi tersebut
- untuk mendukung
- []
+] [10]
+File: images/sistem as-is.png Graphic file (type bmp)
+<images/sistem as-is.png>
 
-File: images/gambar1.png Graphic file (type bmp)
-<images/gambar1.png>
-[10]
-File: images/gambar1.png Graphic file (type bmp)
-<images/gambar1.png>
+Underfull \vbox (badness 5985) has occurred while \output is active []
+
  [11]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [12]
-Underfull \hbox (badness 2119) in paragraph at lines 107--107
-[][]|\TU/TimesNewRoman(0)/m/n/12 Contoh tabel yang menggunakan \TU/lmtt/m/n/12 
-tabularx \TU/TimesNewRoman(0)/m/n/12 untuk mengatur lebar
- []
-
-
-Underfull \hbox (badness 2547) in paragraph at lines 107--107
-\TU/TimesNewRoman(0)/m/n/12 kolom secara fleksibel. Selain itu, tabel ini juga 
-menggunakan
- []
-
-(tables/tabel1.tex) (tables/longtable1.tex [13]
-ignored error: Infinite glue shrinkage found in box being split [14]
-ignored error: Infinite glue shrinkage found in box being split [15])
-Underfull \vbox (badness 7558) has occurred while \output is active []
-
- [16]
-(listings/binary-search-python.tex
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 7.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 6--226
-
- []
-
-(algorithms/binary-search-alg.tex
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 4.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [17]))
-(Bab IV - Penutup.tex [18] [19] [20
-
-]
+[12] [13]) (Bab IV - Penutup.tex [14]
 Bab IV.
-) [21
+) [15
 
-] [22
 
-] (Lampiran-A.tex [23
-
-] [24
+] [16
 
 ]
+
+LaTeX Warning: Empty bibliography on input line 96.
+
+(Lampiran-A.tex
 Lampiran A.
-(listings/binary-search-python.tex [25
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 4.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+(listings/binary-search-python.tex [17
 
-])) (Lampiran-B.tex [26]
+
+])) (Lampiran-B.tex [18]
 Lampiran B.
-) [27
+) [19
 
 
-] [28
+] [20
 
 ] (Laporan_KP.aux)
  ***********
@@ -1504,18 +1417,18 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `Laporan_KP.out' has not changed.
-(rerunfilecheck)             Checksum: 8FCF39D89B8F9E036803D086B97426F7;8025.
+(rerunfilecheck)             Checksum: 0BA9D822D59A6639D331DD97DE703CDC;7035.
 Package logreq Info: Writing requests to 'Laporan_KP.run.xml'.
 \openout1 = `Laporan_KP.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33232 strings out of 402987
- 638475 string characters out of 5448524
- 1944770 words of memory out of 5000000
- 61501 multiletter control sequences out of 15000+600000
- 634673 words of font info for 98 fonts, out of 8000000 for 9000
+ 31520 strings out of 402987
+ 604895 string characters out of 5448524
+ 1885460 words of memory out of 5000000
+ 59826 multiletter control sequences out of 15000+600000
+ 632950 words of font info for 87 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 88i,12n,109p,1201b,7079s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,6n,109p,1201b,2220s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Laporan_KP.pdf (54 pages).
+Output written on Laporan_KP.pdf (46 pages).
