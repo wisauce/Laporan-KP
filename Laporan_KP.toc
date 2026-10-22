@@ -32,16 +32,20 @@
 \contentsline {subsection}{\numberline {III.2.1}Analisis Kebutuhan dan Ruang Lingkup}{12}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {III.2.2}\textit {Exploratory Data Analysis} dan Perumusan Pendekatan}{13}{subsection.3.2.2}%
 \contentsline {subsection}{\numberline {III.2.3}Perancangan Arsitektur Sistem dan Strategi Klasifikasi}{15}{subsection.3.2.3}%
-\contentsline {chapter}{\numberline {IV}PENUTUP}{19}{chapter.4}%
-\contentsline {section}{\numberline {IV.1}Rangkuman Pelaksanaan Pekerjaan}{19}{section.4.1}%
-\contentsline {section}{\numberline {IV.2}Rangkuman Hasil Pekerjaan}{19}{section.4.2}%
-\contentsline {section}{\numberline {IV.3}Evaluasi Diri}{19}{section.4.3}%
-\contentsline {section}{\numberline {IV.4}Saran}{19}{section.4.4}%
-\contentsline {section}{\numberline {IV.5}Ucapan Terima Kasih}{19}{section.4.5}%
-\contentsline {chapter}{Lampiran \numberline {A}\textit {SOURCE CODE}}{21}{appendix.1.A}%
-\contentsline {section}{\numberline {A.1}Perangkat Lunak untuk Akuisisi Data dari Sensor Ultrasonik}{21}{section.1.A.1}%
-\contentsline {section}{\numberline {A.2}Perangkat Lunak untuk Pengolahan Data Akuisisi dan Visualisasi Hasil Pengukuran Jarak}{22}{section.1.A.2}%
-\contentsline {chapter}{Lampiran \numberline {B}HASIL SURVEI LAPANGAN}{23}{appendix.1.B}%
-\contentsline {section}{\numberline {B.1}Foto Survei Lokasi 1}{23}{section.1.B.1}%
-\contentsline {section}{\numberline {B.2}Foto Survei Lokasi 2}{23}{section.1.B.2}%
-\contentsline {section}{\numberline {B.3}Transkrip Wawancara dengan Narasumber}{23}{section.1.B.3}%
+\contentsline {section}{\numberline {III.3}Hasil Pekerjaan}{17}{section.3.3}%
+\contentsline {subsection}{\numberline {III.3.1}Subsistem Ekstraksi Faktur}{17}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {III.3.2}Subsistem Klasifikasi \textit {WHT Code}}{18}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {III.3.3}Integrasi Sistem dengan \textit {Web Tukar Faktur}}{22}{subsection.3.3.3}%
+\contentsline {chapter}{\numberline {IV}PENUTUP}{23}{chapter.4}%
+\contentsline {section}{\numberline {IV.1}Rangkuman Pelaksanaan Pekerjaan}{23}{section.4.1}%
+\contentsline {section}{\numberline {IV.2}Rangkuman Hasil Pekerjaan}{23}{section.4.2}%
+\contentsline {section}{\numberline {IV.3}Evaluasi Diri}{23}{section.4.3}%
+\contentsline {section}{\numberline {IV.4}Saran}{23}{section.4.4}%
+\contentsline {section}{\numberline {IV.5}Ucapan Terima Kasih}{23}{section.4.5}%
+\contentsline {chapter}{Lampiran \numberline {A}\textit {SOURCE CODE}}{25}{appendix.1.A}%
+\contentsline {section}{\numberline {A.1}Perangkat Lunak untuk Akuisisi Data dari Sensor Ultrasonik}{25}{section.1.A.1}%
+\contentsline {section}{\numberline {A.2}Perangkat Lunak untuk Pengolahan Data Akuisisi dan Visualisasi Hasil Pengukuran Jarak}{26}{section.1.A.2}%
+\contentsline {chapter}{Lampiran \numberline {B}HASIL SURVEI LAPANGAN}{27}{appendix.1.B}%
+\contentsline {section}{\numberline {B.1}Foto Survei Lokasi 1}{27}{section.1.B.1}%
+\contentsline {section}{\numberline {B.2}Foto Survei Lokasi 2}{27}{section.1.B.2}%
+\contentsline {section}{\numberline {B.3}Transkrip Wawancara dengan Narasumber}{27}{section.1.B.3}%
