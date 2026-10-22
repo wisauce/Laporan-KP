@@ -1,0 +1,33 @@
+\begin{table}[htbp]
+    \centering
+    \caption{Aturan penyaringan kandidat \textit{WHT code} berdasarkan atribut transaksi}
+    \label{tab:aturan-wht}
+    \small
+    \singlespacing
+    \setlength{\tabcolsep}{3pt}
+    \renewcommand{\arraystretch}{1.15}
+    \begin{threeparttable}
+        \begin{tabular}{c >{\raggedright\arraybackslash}p{1.3cm} >{\raggedright\arraybackslash}p{2.1cm} >{\raggedright\arraybackslash}p{3cm} >{\raggedright\arraybackslash}p{1.5cm} >{\raggedright\arraybackslash}p{1.8cm} >{\centering\arraybackslash}p{1.8cm}}
+            \toprule
+            \textbf{No.} & \textbf{\textit{Legal form}} & \textbf{\textit{Identification number}} & \textbf{\textit{Construction service classification}} & \textbf{\textit{Entity country}} & \textbf{\textit{Vendor country}} & \textbf{Jumlah kemungkinan WHT Code} \\
+            \midrule
+            1 & Z2 & -- & -- & ID & ID & 7 \\
+            2 & Z1 & -- & -- & ID & ID & 5 \\
+            3 & X & -- & -- & MY & X & 3 \\
+            4 & X & ZSUKET & -- & ID & ID & 2 \\
+            5 & X & ZSKB & -- & ID & ID & 2 \\
+            6 & X & ZSBU & 1F & ID & ID & 1 \\
+            7 & X & ZCOD & -- & ID & Foreign & 1 \\
+            8 & X & -- & -- & ID & Foreign & 1 \\
+            9 & X & ZSBU & 1D & ID & ID & 1 \\
+            10 & X & ZSBU & 1B & ID & ID & 1 \\
+            11 & X & ZSBU & 1H & ID & ID & 1 \\
+            12 & X & ZSBU & 1G & ID & ID & 1 \\
+            \bottomrule
+        \end{tabular}
+        \begin{tablenotes}
+            \footnotesize
+            \item \textit{X} menunjukkan nilai atribut dapat diisi apa pun, sedangkan \textit{--} menunjukkan atribut kosong.
+        \end{tablenotes}
+    \end{threeparttable}
+\end{table}

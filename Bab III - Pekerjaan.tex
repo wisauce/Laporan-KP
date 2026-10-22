@@ -96,30 +96,46 @@ Pembatasan ini ditetapkan karena proses tersebut berada di luar cakupan unit ker
 Dengan batasan tersebut, keluaran yang diharapkan dari pekerjaan ini adalah suatu kemampuan pada \textit{Web Tukar Faktur} untuk menilai kesesuaian \textit{WHT code} terhadap substansi transaksi sebelum pembukuan jurnal dilakukan.
 Kemampuan tersebut diharapkan dapat menyetujui secara otomatis faktur dengan rekomendasi berkeyakinan tinggi, mengarahkan kasus lain kepada AP untuk diperiksa, mengurangi kebutuhan koreksi manual pada tahap akhir proses, dan membantu menjaga ketepatan kategori PPh yang digunakan dalam perhitungan pajak.
 
-\subsection{Analisis Data dan Aturan Penentuan \textit{WHT Code}}
-\label{subsec:analisis_data_aturan_wht}
+\subsection{\textit{Exploratory Data Analysis} dan Perumusan Pendekatan}
+\label{subsec:eda_perumusan_pendekatan}
 
-Analisis data dilakukan untuk menentukan informasi yang diperlukan dalam menilai kesesuaian \textit{WHT code} pada setiap faktur.
-Data yang dianalisis dapat dibagi menjadi dua kelompok, yaitu informasi mengenai barang atau jasa pada faktur dan atribut transaksi yang digunakan oleh SAP.
-Informasi pada item faktur memberikan konteks mengenai substansi transaksi, sedangkan atribut dari SAP digunakan untuk menerapkan aturan penentuan \textit{WHT code} yang berlaku.
-Kedua kelompok data tersebut perlu dianalisis bersama karena kesalahan pada salah satu masukan, khususnya \textit{material group}, dapat menghasilkan kode yang tidak sesuai meskipun proses pemetaan SAP berjalan sesuai aturan.
+Tahap \textit{exploratory data analysis} (EDA) dilakukan untuk memahami skala, struktur, dan pola pada data yang digunakan dalam penentuan \textit{WHT code}.
+Penulis memperoleh dua kelompok data utama.
+Data pertama adalah referensi \textit{material group} yang memuat kode, deskripsi, dan contoh penggunaan untuk 636 \textit{material group}.
+Data kedua adalah data pemetaan \textit{WHT code} yang terdiri atas 46.660 baris.
+Jumlah baris pemetaan tersebut terutama dipengaruhi oleh banyaknya \textit{material group} yang dipetakan terhadap kombinasi atribut transaksi, sehingga tidak seluruh baris merepresentasikan aturan yang berbeda.
 
-\textit{Material group} dianalisis sebagai atribut utama karena merepresentasikan kategori barang atau jasa yang menjadi dasar awal pemetaan.
-Kesesuaian atribut ini diuji terhadap deskripsi dan konteks item pada faktur.
-Apabila konteks faktur menunjukkan karakteristik barang atau jasa yang berbeda dari \textit{material group} pada data pengadaan, sistem perlu mengidentifikasi adanya potensi ketidaksesuaian sebelum menentukan rekomendasi kode.
-Dengan demikian, isi faktur digunakan untuk memperoleh pemahaman atas transaksi yang sebenarnya, bukan hanya mengandalkan kategori yang telah dipilih pada tahap PR.
+Hipotesis awal yang dirumuskan bersama mentor adalah membangun model klasifikasi \textit{material group} berbasis \textit{encoder}, seperti \textit{Bidirectional Encoder Representations from Transformers} (BERT).
+Model tersebut diharapkan dapat mengklasifikasikan konteks barang atau jasa pada item faktur ke dalam \textit{material group} yang sesuai.
+Namun, pengembangan pendekatan ini membutuhkan sumber daya komputasi, waktu, dan pengetahuan teknis yang besar, khususnya untuk menyiapkan data serta melatih dan mengevaluasi model klasifikasi dengan 636 kelas.
+Sebagai alternatif, penulis mengeksplorasi penggunaan \textit{large language model} (LLM) melalui \textit{few-shot learning}, yaitu pemberian instruksi dan contoh pengelompokan dalam bahasa alami.
+Pada pendekatan ini, LLM diharapkan mengoreksi \textit{material group} terlebih dahulu, kemudian hasilnya digunakan untuk memetakan ulang \textit{WHT code}.
 
-Atribut lain berfungsi melengkapi konteks perpajakan dalam aturan pemetaan.
-\textit{Legal form} membedakan pemasok berbentuk badan dan perorangan, sedangkan \textit{identification number} merepresentasikan surat atau keterangan perpajakan yang berlaku bagi pemasok.
-\textit{Construction service classification} digunakan apabila transaksi berkaitan dengan jasa konstruksi.
-Selain itu, \textit{entity country} menunjukkan negara entitas Paragon yang bertransaksi dan \textit{vendor country} menunjukkan negara asal pemasok.
-Atribut \textit{identification number} dan \textit{construction service classification} dapat tidak terisi; kondisi tersebut diperlakukan sebagai bagian dari data transaksi dan tetap diperhitungkan dalam penerapan aturan.
+Hasil eksperimen awal menunjukkan bahwa pendekatan klasifikasi \textit{material group} menggunakan LLM memiliki keterbatasan.
+Jumlah \textit{material group} yang melebihi 600 menyulitkan model untuk menangkap konteks seluruh kategori secara konsisten.
+Penggunaan model dengan \textit{context window} yang lebih besar juga meningkatkan biaya token.
+Selain itu, terdapat kategori yang ambigu, misalnya \textit{Material} dan \textit{Material (Untuk Event)}, padahal keduanya dapat menghasilkan tarif pajak yang berbeda secara signifikan.
+Prototipe awal yang dibuat untuk menguji pendekatan tersebut menghasilkan kinerja klasifikasi yang belum memadai dengan biaya pemrosesan yang relatif tinggi.
 
-Aturan penentuan \textit{WHT code} dalam SAP bersifat tetap dan berbasis kombinasi atribut tersebut.
-Oleh karena itu, pekerjaan ini tidak mengubah aturan pemetaan maupun menetapkan tarif PPh baru.
-Peran sistem adalah menggunakan konteks faktur untuk memperoleh rekomendasi kategori barang atau jasa yang lebih sesuai, lalu menggunakan atribut transaksi yang tersedia sebagai masukan untuk menentukan rekomendasi \textit{WHT code} berdasarkan aturan yang berlaku.
-Pendekatan ini menjaga agar rekomendasi sistem tetap selaras dengan mekanisme perpajakan yang telah diterapkan perusahaan.
+Untuk mencari alternatif, penulis melanjutkan EDA pada data pemetaan \textit{WHT code}.
+Analisis menunjukkan bahwa 46.660 baris pemetaan dapat direduksi menjadi 12 aturan berbasis kondisi (\textit{if--else}) yang menentukan himpunan kandidat \textit{WHT code}.
+Aturan tersebut menggunakan atribut \textit{legal form}, \textit{identification number}, \textit{construction service classification}, \textit{entity country}, dan \textit{vendor country}.
+Tabel \ref{tab:aturan-wht} menyajikan hasil ekstraksi aturan tersebut.
 
-Hasil analisis ini menjadi dasar penetapan masukan dan keluaran sistem.
-Masukan sistem meliputi konteks item faktur serta enam atribut pemetaan dari SAP, sedangkan keluarannya berupa rekomendasi \textit{WHT code} dan tingkat keyakinan atas rekomendasi tersebut.
-Tingkat keyakinan kemudian digunakan untuk menentukan apakah suatu faktur dapat disetujui secara otomatis atau perlu diteruskan kepada AP untuk pemeriksaan lebih lanjut.
+\input{tables/tabel-aturan-wht.tex}
+
+Aturan pada Tabel \ref{tab:aturan-wht} digunakan sebagai tahap penyaringan sebelum proses klasifikasi.
+Untuk setiap transaksi, aturan tersebut terlebih dahulu menentukan himpunan \textit{WHT code} yang mungkin.
+Melalui data pemetaan, himpunan kode tersebut kemudian digunakan untuk menyaring \textit{material group} yang mungkin menghasilkan kode bersangkutan.
+Meskipun penyaringan ini mempersempit kandidat, jumlah \textit{material group} yang tersisa masih sekitar 300 sehingga klasifikasi \textit{material group} tetap memberikan hasil yang kurang memadai.
+
+Tahap diskusi lanjutan dengan pemangku kepentingan dari tim keuangan menghasilkan pemahaman baru mengenai peran \textit{material group}.
+Pada awalnya, penulis menghindari klasifikasi objek pajak karena tidak memiliki keahlian domain perpajakan dan mengasumsikan \textit{material group} telah menjadi representasi objek pajak yang ditetapkan oleh tim pajak.
+Namun, tim keuangan menjelaskan bahwa \textit{material group} merupakan abstraksi yang terutama digunakan untuk memudahkan pengguna dalam membuat PO.
+Setelah kandidat \textit{WHT code} disaring menggunakan aturan yang diekstrak, objek pajak menjadi lebih distingtif untuk diklasifikasikan.
+Sebagai contoh, jasa bagi UMKM dan jasa non-UMKM berada pada baris aturan yang berbeda karena atribut perpajakannya berbeda.
+
+Berdasarkan hasil EDA dan validasi dengan tim keuangan, pendekatan sistem diubah dari klasifikasi \textit{material group} menjadi klasifikasi jenis objek pajak pada item-item faktur.
+Aturan berbasis kondisi digunakan lebih dahulu untuk membatasi kandidat \textit{WHT code}, kemudian LLM mengklasifikasikan jenis objek pajak berdasarkan konteks item faktur dalam ruang kandidat tersebut.
+Hasil klasifikasi selanjutnya digunakan untuk menentukan rekomendasi \textit{WHT code} yang sesuai.
+Pendekatan ini mengurangi ruang klasifikasi, menghindari ketergantungan pada kategori \textit{material group} yang ambigu, dan menekan biaya pemrosesan LLM.

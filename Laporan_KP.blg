@@ -1,9 +1,0 @@
-[0] Config.pm:328> INFO - This is Biber 2.21
-[0] Config.pm:331> INFO - Logfile is 'Laporan_KP.blg'
-[235] biber-MSWIN64:342> INFO - === 
-[337] Biber.pm:421> INFO - Reading 'Laporan_KP.bcf'
-[459] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
-[480] bbl.pm:676> INFO - Writing 'Laporan_KP.bbl' with encoding 'UTF-8'
-[481] bbl.pm:779> INFO - Output to Laporan_KP.bbl
-[481] Biber.pm:132> WARN - The file 'Laporan_KP.bcf' does not contain any citations!
-[481] Biber.pm:134> INFO - WARNINGS: 1
