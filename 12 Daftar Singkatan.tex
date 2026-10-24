@@ -1,28 +1,61 @@
 \cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{DAFTAR SINGKATAN}
+\label{chap:singkatan}
 \vspace{2cm}
 \begin{center}
-{\fontsize{14}{16.8}\selectfont\textbf{DAFTAR SINGKATAN}}\\[1em]
+    {\fontsize{14}{16.8}\selectfont\textbf{DAFTAR SINGKATAN}}\\[1em]
 \end{center}
-\label{chap:singkatan}
-\addcontentsline{toc}{chapter}{DAFTAR SINGKATAN}
-\setcounter{chapter}{0}
-\setcounter{section}{0}
-\vspace{2em}
+\vspace{1em}
 
-
-
-
-\begin{longtable}{@{} l >{\raggedright\arraybackslash}p{7.5cm} c @{}}
-\multicolumn{1}{l}{\textbf{Singkatan}} & \multicolumn{1}{l}{\textbf{Deskripsi}} & \multicolumn{1}{l}{\parbox[c]{3.5cm}{\raggedright \textbf{Pemakaian pertama kali}}} \\
-
-% ============================================================
-% DATA SINGKATAN (URUT ABJAD A-Z)
-% ============================================================
-
-AI & \textit{Artificial Intelligence} & 1 \\
-CNN & \textit{Convolutional Neural Network} & 2 \\
-GPU & \textit{Graphics Processing Unit} & 14 \\
-
-
+\begingroup
+\small
+\singlespacing
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{longtable}{>{\raggedright\arraybackslash}p{\dimexpr0.15\textwidth-2\tabcolsep\relax} >{\raggedright\arraybackslash}p{\dimexpr0.63\textwidth-2\tabcolsep\relax} >{\centering\arraybackslash}p{\dimexpr0.22\textwidth-2\tabcolsep\relax}}
+    \toprule
+    \textbf{Singkatan} & \textbf{Deskripsi} & \textbf{Pemakaian pertama} \\
+    \midrule
+    \endfirsthead
+    \toprule
+    \textbf{Singkatan} & \textbf{Deskripsi} & \textbf{Pemakaian pertama} \\
+    \midrule
+    \endhead
+    \midrule
+    \multicolumn{3}{r}{\textit{Bersambung ke halaman berikutnya}} \\
+    \endfoot
+    \bottomrule
+    \endlastfoot
+    AI & \textit{Artificial Intelligence} (akal imitasi) & \pageref{abbr:AI} \\
+    AP & \textit{Account Payable} & \pageref{abbr:AP} \\
+    API & \textit{Application Programming Interface} & \pageref{abbr:API} \\
+    AWS & \textit{Amazon Web Services} & \pageref{abbr:AWS} \\
+    BERT & \textit{Bidirectional Encoder Representations from Transformers} & \pageref{abbr:BERT} \\
+    COD & \textit{Certificate of Domicile} & \pageref{abbr:COD} \\
+    CSV & \textit{Comma-Separated Values} & \pageref{abbr:CSV} \\
+    EDA & \textit{Exploratory Data Analysis} & \pageref{abbr:EDA} \\
+    FATL & \textit{Finance, Accounting, Tax and Legal} & \pageref{abbr:FATL} \\
+    GPU & \textit{Graphics Processing Unit} & \pageref{abbr:GPU} \\
+    GR & \textit{Goods Receipt} & \pageref{abbr:GR} \\
+    KP & Kerja Praktik & \pageref{abbr:KP} \\
+    LLM & \textit{Large Language Model} & \pageref{abbr:LLM} \\
+    OCR & \textit{Optical Character Recognition} & \pageref{abbr:OCR} \\
+    PDF & \textit{Portable Document Format} & \pageref{abbr:PDF} \\
+    PO & \textit{Purchase Order} & \pageref{abbr:PO} \\
+    POC & \textit{Proof of Concept} & \pageref{abbr:POC} \\
+    PP & Peraturan Pemerintah & \pageref{abbr:PP} \\
+    PPh & Pajak Penghasilan & \pageref{abbr:PPh} \\
+    PR & \textit{Purchase Request} & \pageref{abbr:PR} \\
+    PT & Perseroan Terbatas & \pageref{abbr:PT} \\
+    S3 & \textit{Simple Storage Service} & \pageref{abbr:S3} \\
+    SAP & \textit{Systems, Applications, and Products in Data Processing} & \pageref{abbr:SAP} \\
+    SKB & Surat Keterangan Bebas & \pageref{abbr:SKB} \\
+    SUKET & Surat Keterangan & \pageref{abbr:SUKET} \\
+    UMKM & Usaha Mikro, Kecil, dan Menengah & \pageref{abbr:UMKM} \\
+    WHT & \textit{Withholding Tax} & \pageref{abbr:WHT} \\
 \end{longtable}
+\endgroup
+
+Nomor halaman menunjukkan pemakaian pertama pada bagian utama laporan.
 

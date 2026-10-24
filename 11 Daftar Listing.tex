@@ -1,6 +1,15 @@
 \cleardoublepage
-\titlespacing*{\chapter}{0pt}{40pt}{20pt}
-\lstlistoflistings
+\phantomsection
 \addcontentsline{toc}{chapter}{DAFTAR KODE PROGRAM}
 \label{chap:daftar-listing}
-\setcounter{chapter}{0}
+\vspace{2cm}
+\begin{center}
+    {\fontsize{14}{16.8}\selectfont\textbf{DAFTAR KODE PROGRAM}}\\[1em]
+\end{center}
+\vspace{1em}
+
+{\singlespacing\setlength{\parskip}{0pt}
+    \makeatletter
+    \@starttoc{lol}
+    \makeatother
+}

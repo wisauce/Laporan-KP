@@ -1,16 +1,53 @@
 % ==========================================
-% BAB VII PENUTUP
+% BAB IV PENUTUP
 % ==========================================
 \cleardoublepage
 \chapter{PENUTUP}
 \label{chap:penutup}
 \section{Rangkuman Pelaksanaan Pekerjaan}
-Bagian ini menjelaskan rangkuman proses pelaksanaan pekerjaan yang telah dilakukan.
+Selama pelaksanaan kerja praktik di PT Paragon Technology and Innovation, penulis berkontribusi pada pengembangan sistem koreksi \textit{WHT code} berbasis AI pada \textit{Web Tukar Faktur}. Pekerjaan berangkat dari ketidaksesuaian kategori PPh yang dapat terjadi akibat kesalahan pemilihan \textit{material group} pada proses pengadaan. Pengembangan difokuskan pada pemeriksaan faktur sebelum pembukuan di SAP karena perubahan pada proses pengadaan berada di luar ruang lingkup unit kerja penulis.
+
+Pelaksanaan pekerjaan mencakup pemahaman proses bisnis, analisis kebutuhan, eksplorasi data, perumusan pendekatan, serta pengembangan subsistem ekstraksi faktur dan klasifikasi WHT. Melalui EDA terhadap referensi \textit{material group} dan data pemetaan WHT, penulis menemukan bahwa ruang kandidat dapat dipersempit menggunakan atribut vendor dan negara. Temuan tersebut mengubah pendekatan awal klasifikasi \textit{material group} menjadi klasifikasi objek pajak dalam himpunan kandidat yang telah disaring.
+
+Pengembangan dilanjutkan dengan penggunaan AWS Textract untuk ekstraksi faktur, penyusunan prompt klasifikasi, dan perhitungan tingkat keyakinan berdasarkan lima parameter. Diskusi bersama mentor dan tim keuangan membantu penulis memahami perbedaan objek pajak serta menyusun konteks klasifikasi yang lebih sesuai. Penyesuaian integrasi diarahkan pada pemisahan dokumen faktur dari dokumen pendukung, penentuan kebutuhan pemeriksaan AP, dan penyajian hasil analisis AI pada antarmuka aplikasi.
+
 \section{Rangkuman Hasil Pekerjaan}
-Tuliskan rangkuman semua hasil pekerjaan, baik yang sudah maupun yang belum diselesaikan. Sampaikan juga hasil pengembangan keprofesian, peningkatan kompetensi, atau keahlian yang diperoleh.
+Hasil utama pekerjaan terdiri atas dua subsistem dan penyesuaian integrasinya dengan \textit{Web Tukar Faktur}. Subsistem ekstraksi faktur mengubah dokumen menjadi teks menggunakan AWS Textract, dengan dukungan Amazon S3 untuk pemrosesan asinkron. Subsistem klasifikasi menyaring kandidat WHT berdasarkan atribut transaksi, menggabungkan prompt utama dengan deskripsi kandidat, dan menghasilkan rekomendasi per item PO. Hasilnya disertai penjelasan klasifikasi dan tingkat keyakinan agar dapat ditinjau lebih lanjut.
+
+Pada integrasi sistem, hasil prediksi dibandingkan dengan kode yang tercatat pada SAP. Faktur dapat diteruskan ke proses \textit{autopost} apabila prediksi sesuai dan tingkat keyakinannya memenuhi ambang batas. Ketidaksesuaian kode atau tingkat keyakinan yang rendah tetap memerlukan pemeriksaan AP. Antarmuka juga disesuaikan untuk menampilkan hasil prediksi dan parameter tingkat keyakinan, sedangkan pemisahan unggahan memastikan hanya faktur yang diproses sebagai konteks klasifikasi. Perubahan proses PR dan PO serta aturan perpajakan SAP tetap berada di luar cakupan hasil pekerjaan ini.
+
+Selain menghasilkan komponen perangkat lunak, kerja praktik meningkatkan kemampuan penulis dalam mengeksplorasi data, merancang layanan backend, mengintegrasikan OCR dan LLM, serta menerjemahkan kebutuhan bisnis menjadi keputusan teknis. Penulis juga memperoleh pengalaman berkolaborasi dengan pemangku kepentingan yang memiliki latar belakang dan kebutuhan informasi berbeda.
+
 \section{Evaluasi Diri}
-Tuliskan secara jujur kesan, penilaian penerapan profesionalisme dan etika profesi dalam pekerjaan, refleksi keberhasilan dan kegagalan, introspeksi diri, dan hal-hal yang dapat diperbaiki pada diri Anda pada saat pelaksanaan kerja praktik untuk perbaikan ke depan. Evaluasi diri ini ditulis dalam bentuk pernyataan-pernyataan yang positif dan tidak subyektif berdasarkan hasil penilaian pada kinerja dan kemampuan diri sendiri.
+Pelaksanaan kerja praktik memberikan sejumlah pembelajaran yang mengubah cara penulis memandang pengembangan perangkat lunak. Evaluasi diri penulis dijabarkan sebagai berikut.
+\begin{enumerate}
+    \item \textbf{Memahami pengguna dan pentingnya desain antarmuka.} Penulis sebelumnya cenderung menganggap bahwa informasi yang jelas bagi pengembang akan mudah dipahami pula oleh pengguna. Kesalahan pemilihan \textit{material group} menunjukkan bahwa pengguna memiliki pemahaman istilah dan konteks kerja yang berbeda. Penulis belajar untuk tidak langsung menganggap kesalahan sebagai kekurangan pengguna, tetapi menelaah apakah pilihan, petunjuk, dan alur aplikasi telah membantu pengguna mengambil keputusan yang tepat.
+
+    \item \textbf{Menyederhanakan komunikasi.} Penulis menyadari bahwa penjelasan yang terlalu berfokus pada model, arsitektur, atau mekanisme teknis belum tentu menjawab kebutuhan pemangku kepentingan. Penjelasan perlu dimulai dari persoalan bisnis, perilaku sistem, dan dampaknya terhadap pekerjaan pengguna. Ke depan, penulis perlu lebih konsisten menggunakan contoh transaksi dan bahasa yang sesuai dengan latar belakang lawan bicara, serta memastikan bahwa penjelasan telah dipahami.
+
+    \item \textbf{Mendahulukan pemahaman data.} Eksplorasi awal terlalu cepat berfokus pada pemilihan model klasifikasi sebelum struktur data dipahami secara menyeluruh. EDA lanjutan justru menghasilkan perubahan pendekatan yang lebih mendasar daripada pergantian model. Pengalaman ini mengajarkan penulis untuk memeriksa makna atribut, pola pemetaan, kategori yang ambigu, dan pengecualian data sebelum menetapkan solusi pada pekerjaan yang bergantung pada data.
+
+    \item \textbf{Memahami proses bisnis dan keahlian domain.} Kemampuan teknis perlu dilengkapi pemahaman tentang tujuan, aturan, dan tanggung jawab dalam proses bisnis. Diskusi dengan tim keuangan memperbaiki asumsi penulis mengenai fungsi \textit{material group} dan memungkinkan penggunaan objek pajak sebagai dasar klasifikasi. Penulis belajar untuk menyatakan keterbatasan pengetahuan domain, mengonfirmasi asumsi, dan melibatkan pihak yang memahami substansi persoalan sejak awal.
+
+    \item \textbf{Mengenali ruang lingkup dan batas kewenangan.} Penyelesaian pada akar masalah tidak selalu dapat dilakukan dalam suatu penugasan. Pencegahan kesalahan \textit{material group} pada tahap PR memerlukan perubahan di luar kewenangan unit kerja penulis. Penulis belajar membedakan solusi ideal dari kontribusi yang dapat dilaksanakan, menjelaskan keterbatasannya, dan memilih titik perbaikan yang tetap memberikan manfaat dalam ruang lingkup yang tersedia.
+
+\end{enumerate}
+
 \section{Saran}
-Berikan saran-saran yang konstruktif untuk perusahaan tempat pelaksanaan kerja praktik, baik yang berkaitan dengan proses pelaksanaan pekerjaan maupun hal-hal lain yang relevan berdasarkan pengalaman selama pelaksanaan kerja praktik.
+Saran penulis berfokus pada penguatan kematangan praktik teknologi di lingkungan kerja yang diamati. Skala dan kematangan bisnis perusahaan tidak otomatis menunjukkan bahwa tata kelola teknologinya telah mencapai tingkat kematangan yang sama. Budaya kekeluargaan di Paragon memudahkan komunikasi dan pertukaran pengetahuan secara langsung. Namun, praktik tersebut perlu ditopang dokumentasi, standar teknis, dan kepatuhan yang lebih konsisten agar pengetahuan serta keberlanjutan sistem tidak bergantung pada individu tertentu.
+
+Oleh karena itu, pengembangan teknologi mutakhir sebaiknya didukung dengan penguatan praktik dasar rekayasa perangkat lunak. Prioritas perbaikan yang disarankan adalah sebagai berikut.
+\begin{enumerate}
+    \item \textbf{Memperkuat dokumentasi dan transfer pengetahuan.} Pengetahuan yang diperoleh melalui diskusi maupun pengalaman pengembangan perlu dirangkum dalam dokumentasi yang mudah ditemukan dan diperbarui. Dokumentasi tersebut dapat mencakup cara kerja sistem, keputusan arsitektur beserta alasannya, konfigurasi layanan, dan prosedur penanganan kendala. Serah terima pekerjaan serta sesi berbagi pengetahuan perlu dilakukan secara terstruktur agar anggota tim lain dapat melanjutkan pemeliharaan sistem.
+
+    \item \textbf{Menyepakati standar teknis yang dapat diterapkan bersama.} Tim perlu memiliki standar minimum untuk struktur proyek, dokumentasi, pengelolaan konfigurasi, peninjauan kode, dan pengelolaan perubahan. Standar tersebut sebaiknya cukup jelas untuk menjadi acuan bersama sekaligus dapat diterapkan dalam pekerjaan sehari-hari. Dengan demikian, kebebasan memilih pendekatan teknis tetap disertai konsistensi yang memudahkan kerja sama dan pemeliharaan.
+
+    \item \textbf{Memastikan kepatuhan terhadap standar dalam pelaksanaan kerja.} Berdasarkan pengamatan penulis selama kerja praktik, masih banyak proses kerja di lingkungan Paragon Corp yang diamati berlangsung secara \textit{ad hoc}, yaitu ditangani sesuai kebutuhan saat itu dan bergantung pada koordinasi langsung antarindividu. Pendekatan tersebut membantu merespons kebutuhan dengan cepat, tetapi perlu dilengkapi mekanisme yang lebih sistematis agar pelaksanaan standar dapat dipastikan secara konsisten. Perusahaan dapat memperjelas prosedur, menetapkan penanggung jawab, serta menggunakan daftar periksa dan pencatatan tindak lanjut dalam peninjauan perubahan maupun serah terima pekerjaan. Pemeriksaan kepatuhan juga perlu dilakukan secara berkala agar kekurangan dapat ditindaklanjuti dan hasil perbaikannya dapat ditelusuri. Dengan demikian, kepatuhan terhadap standar menjadi bagian dari proses penyelesaian pekerjaan dan tidak hanya bergantung pada inisiatif individu.
+\end{enumerate}
+
 \section{Ucapan Terima Kasih}
-Sampaikan ucapakan terima kasih kepada pihak-pihak yang relevan dalam pelaksanaan kerja praktik.
+Penulis menyampaikan terima kasih sebesar-besarnya kepada Mas Tubagus Hendro Pramono selaku mentor yang telah membimbing penulis sepanjang pelaksanaan kerja praktik. Arahan, pendampingan, dan dukungan yang diberikan membantu penulis menjalani proses pembelajaran serta menyelesaikan proyek yang menjadi tanggung jawab penulis.
+
+Ucapan terima kasih juga penulis sampaikan kepada Mbak Indita Ramasahpira yang telah menjembatani komunikasi dengan para pemangku kepentingan selama pelaksanaan pekerjaan. Penulis berterima kasih kepada Mas Joeken King Abednego selaku \textit{Head of FATL} yang senantiasa memberikan ruang bagi tim untuk berkembang, serta Mas Tegar Satria Nurhyuda selaku \textit{Head of Software Engineering} atas kepercayaan dan kesempatan yang diberikan kepada penulis untuk belajar serta bertumbuh.
+
+Penulis juga menyampaikan apresiasi dan terima kasih yang sebesar-besarnya kepada seluruh rekan di Departemen Software Engineering yang telah menemani keseharian penulis selama kerja praktik. Kebersamaan, bantuan, dan dukungan rekan-rekan menjadikan pengalaman ini berkesan serta memberikan ruang bagi penulis untuk berkembang secara profesional maupun pribadi.

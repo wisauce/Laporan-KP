@@ -1,0 +1,253 @@
+Week,Hari,Tanggal,Aktivitas
+W1,Selasa,6/2/2026,"- Onboarding terpusat HR
+- Setup Company Email dan Microsoft Teams
+- Pengelompokan Stream ke FATL (Finance, Accounting, Law and Tax)
+- Pengelompokan dan perkenalan dengan mentor"
+W1,Rabu,6/3/2026,"- Onboarding IT (SDBS+BBS+FATL)
+- Onboarding Stream (FATL)
+- Pengenalan Ways of Working (WoW)
+- Pendelegasian proyek Revamp Website Tukar Faktur
+- Setup GitLab
+- Setup Stream Booster"
+W1,Kamis,6/4/2026,"- Pengenalan Web Tukar Faktur
+- Pembagian handbook, repository, dan URL Web Tukar Faktur"
+W1,Jumat,6/5/2026,"- Setup VPN
+- Setup Jira
+- Cloning repository ke local"
+W2,Senin,6/8/2026,- Memahami proses bisnis alur utama tukar faktur
+W2,Selasa,6/9/2026,- Memahami proses bisnis termin pembayaran tukar faktur
+W2,Rabu,6/10/2026,"- Memahami proses bisnis review invoice submission
+- Mempelajari syntax dasar PHP
+- Memahami source code struktur codebase"
+W2,Kamis,6/11/2026,"- Memahami proses bisnis kasus PO internal
+- Mempelajari syntax lanjutan PHP yang relevan
+- Memahami source code entrypoint controller"
+W2,Jumat,6/12/2026,"- Memahami proses bisnis BAST
+- Mempelajari syntax lanjutan PHP yang relevan
+- Hosting staging secara lokal untuk analisis saat runtime"
+W3,Senin,6/15/2026,"- Membuat fitur DS39-628: Menambahkan kolom receipt note pada email notifikasi dan kalimat reminder pada receipt note
+- Meeting UAT internal fitur progress tracker"
+W3,Selasa,6/16/2026,- Libur Imlek
+W3,Rabu,6/17/2026,"- Membuat fitur DS39-632: Menambahkan kolom username submitter di laman raw data
+- Meeting kickoff revamp web tukar faktur"
+W3,Kamis,6/18/2026,"- Mempelajari syntax lanjutan PHP yang relevan
+- Memahami source code invoiceSubmissionController"
+W3,Jumat,6/19/2026,"- Mempelajari konsep framework Yii2
+- Memahami source code struktur logic Yii2"
+W4,Senin,6/22/2026,"- Pengenalan lingkungan dan fasilitas kantor
+- Meeting diskusi isu outbound PO & GR
+- Mengeksplorasi berbagai alternatif software modelling untuk dokumentasi kondisi as-is codebase sebelum revamp
+- Mempelajari intisari buku Working Effectively with Legacy Code untuk memudahkan proses revamp"
+W4,Selasa,6/23/2026,"- Meeting Pembahasan timeline kasar dan tech stack Revamp Web Tukar Faktur
+- Meeting Penggunaan AI dalam workflow klasifikasi kode WHT pada item di invoice
+- Pendelegasian proyek integrasi AI dalam Website Tukar Faktur
+- Mengeksplorasi tools software modelling (mermaid, plantuml, figma extension)
+- Membuat dokumentasi flowchart proses bisnis utama
+- Memindahkan flowchart ke figjam stream FATL"
+W4,Rabu,6/24/2026,"- Membuat dokumentasi flowchart alur source code
+- Membuat dokumentasi pemetaan proses bisnis dengan source code
+- Membuat dokumentasi overview untuk memahami kedua perspektif secara garis besar
+- Meeting Weekly Web Tukar Faktur: membahas bug fix dan to-be setelah revamp
+- Meeting penggunaan AI in tukar faktur: mengidentifikasi pain point utama yaitu misinput material group oleh user saat membuat PR sehingga tax code salah dari awal
+- Diskusi dengan mentor tentang alternatif pendekatan AI untuk automasi web tukar faktur antara menggunakan API LLM atau modelling sendiri"
+W4,Kamis,6/25/2026,"- Mempelajari backend from first principles
+- Diskusi dengan mentor dan technology solution terkait solusi AI yang ingin diimplementasikan
+- Memahami alur data pada SAP
+- Memahami data-data yang diperlukan untuk membuat model AI"
+W4,Jumat,6/26/2026,"- Membuat flow chart kondisi as-is sistem koreksi WHT
+- Membuat flow chart kondisi to-be sistem koreksi WHT dengan AI
+- Membuat alternatif model AI yang digunakan untuk solusi sistem koreksi WHT"
+W5,Senin,6/29/2026,"- Membuat pitch deck sistem rekomendasi WHT berbasis AI
+- Menarik dataset purchase request historik dari production
+- Mempelajari dataset purchase request historik yang akan digunakan"
+W5,Selasa,6/30/2026,"- Mempelajari dataset purchase request historik yang akan digunakan
+- Merevisi flow sistem rekomendasi WHT berbasis AI"
+W5,Rabu,7/1/2026,"- Membuat iterasi pertama subsistem koreksi material group
+- Melakukan validasi awal performa subsistem dengan random sampling dari data production
+- Menjelaskan metode yang digunakan kepada technology solution terkait
+- Mengidentifikasi kekurangan dari pendekatan saat ini dan melakukan evaluasi untuk perbaikan subsistem"
+W5,Kamis,7/2/2026,"- Melakukan eksplorasi SLM untuk menggantikan LLM pada subsistem koreksi material group
+- Melakukan eksplorasi OCR lokal untuk subsistem ekstraksi nama item dari invoice (Unlimited OCR dan PaddleOCR)
+- Melakukan eksplorasi specialized VLM untuk subsistem ekstraksi nama item sebagai alternatif OCR"
+W5,Jumat,7/3/2026,"- Membuat prototype AI-based Tax Code Validation System (Jupyter Notebook)
+- Membuat prototype Invoice Item Name Extraction System (Jupyter Notebook)"
+W6,Senin,7/6/2026,"- Melakukan eksplorasi pendekatan untuk subsistem Invoice Item Name Extraction
+- Membuat prototype AI-based Tax Code Validation System untuk batching dengan model alternatif
+- Membuat pengujian prototype AI-based Tax Code Validation System dengan data production
+- Membuat laporan inkonsistensi data production"
+W6,Selasa,7/7/2026,"- Melakukan konfirmasi dengan technology solution terkait inkonsistensi data
+- Mengajukan permohonan penggunaan data production untuk testing sistem AI kepada technology solution
+- Mengonfirmasi data material group mapping yang sudah dilengkapi oleh tim Tax"
+W6,Rabu,7/8/2026,"- Melakukan EDA lanjut untuk menganalisis penyebab data kotor
+- Melakukan survei harga API LLM untuk mendapatkan gambaran cost solusi
+- Meminta data lanjutan untuk EDA"
+W6,Kamis,7/9/2026,- Melakukan analisis data lebih lanjut dengan melakukan joining antartabel
+W6,Jumat,7/10/2026,"- Menemukan pola data pemetaan kode pajak yang bisa digunakan untuk menyederhanakan solusi
+- Mengomunikasikan penemuan tersebut ke technology solution dan mentor"
+W7,Senin,7/13/2026,"- Mengomunikasikan penemuan tersebut ke stream lead dan tech lead
+- Mendapatkan persetujuan untuk mengganti pendekatan solusi menggunakan penemuan tersebut
+- Membuat POC Tax Code Validation System via Tax Object Classification (Pendekatan Baru) dalam medium jupyter notebook
+- Melakukan data preparation untuk demo dengan user
+- Mengidentifikasi beberapa edge case"
+W7,Selasa,7/14/2026,"- Mengomunikasikan penemuan sekaligus prototype ke TS lead
+- Mendapat persetujuan TS lead untuk dilanjutkan ke tahap demo user
+- Membuat interactive GUI untuk memudahkan demonstrasi POC
+- Mendemokan POC ke user (Head of Finance)
+- Mendapatkan persetujuan head of finance untuk dikembangkan lebih lanjut"
+W7,Rabu,7/15/2026,"- Melakukan eksplorasi lanjutan untuk pasal perpajakan yang berlaku dalan pemetaan tax code
+- Mempelajari backend from first principles"
+W7,Kamis,7/16/2026,"- Mendapatkan akses API KEY ke AWS Textract
+- Mendapatkan akses API KEY ke Google Document AI"
+W7,Jumat,7/17/2026,"- Mengikuti meeting Tax Code Validation dan Three Ways Matching
+- Membuat dokumentasi pemetaan antara data vendor dengan prompt sistem AI
+- Mengajukan permohonan ke tim Tax untuk melakukan revisi prompt AI agar sesuai dengan peraturan perundang-undangan yang berlaku"
+W8,Senin,7/20/2026,"- Melakukan eksplorasi AWS Textract
+- Melakukan eksplorasi alternatif model LLM untuk document extraction"
+W8,Selasa,7/21/2026,"- Meeting dengan tim tax untuk mengonfirmasi mappingan WHT code dan prompt
+- Meeting harian AI tax code validation"
+W8,Rabu,7/22/2026,"- Membuat template sheets untuk memudahkan tim tax merincikan detail objek pajak
+- Mengirim template sheets ke tim tax
+- Melakukan pengujian failed test case sebelumnya pada sistem setelah revisi prompt"
+W8,Kamis,7/23/2026,- Meeting harian AI tax code validation
+W8,Jumat,7/24/2026,"-Meeting harian AI tax code validation
+-Meeting mingguan IT FATL
+-Mengidentifikasi masalah baru misklasifikasi AI karena ambiguitas antara barang dan jasa"
+W9,Senin,7/27/2026,"-Mengajukan permohonan deployment sistem ke local network
+-Mengikuti intern session dan berkenalan dengan IT intern lain
+-Mengikuti presentasi dari Pak Risman (CTO Paragon) tentang visi paragon tech
+-Meeting konfirmasi mapping WHT
+-Meeting konfirmasi design POC untuk biweekly update ke finance"
+W9,Selasa,7/28/2026,"-Membuat modifikasi FE dan BE untuk POC AI tax code validation
+-Meeting biweekly update ke finance"
+W9,Rabu,7/29/2026,"-Melakukan benchmarking cara kerja invoice submission aplikasi umum seperti SAP Ariba
+-Mengonfirmasi proses bisnis invoice submission ke head of technology solution"
+W9,Kamis,7/30/2026,"-Meeting harian AI tax code validation
+-Menganalisis prototype interface aplikasi dari TS"
+W9,Jumat,7/31/2026,"-Mengikuti Engineering Connect #2: Clean Code Architecture in Go
+-Meeting harian AI tax code validation
+-Meeting mingguan IT FATL"
+W10,Senin,8/3/2026,-Melakukan eksplorasi interface terbaik untuk AI tax code validation
+W10,Selasa,8/4/2026,"-Meeting harian AI tax code validation
+-Menerima laporan isu data vendor dengan field duplikat"
+W10,Rabu,8/5/2026,"-Meeting harian AI tax code validation
+-Menganalisis laporan isu data vendor dengan field duplikat"
+W10,Kamis,8/6/2026,"-Meeting harian AI tax code validation
+-Mengikuti meeting dengan tim SAP terkait data vendor field duplikat"
+W10,Jumat,8/7/2026,"-Meeting harian AI tax code validation
+-Melakukan eksplorasi best practice Python backend"
+W11,Senin,8/10/2026,"-Meeting harian AI tax code validation
+-Melakukan eksplorasi best practice Python backend"
+W11,Selasa,8/11/2026,"-Meeting harian AI tax code validation
+-Menunggu pengerjaan initial AI tax code validation backend"
+W11,Rabu,8/12/2026,"-Meeting harian AI tax code validation
+-Menerima handover AI tax code validation backend dari mentor"
+W11,Kamis,8/13/2026,"-Meeting harian AI tax code validation
+-Menganalisis AI tax code validation backend"
+W11,Jumat,8/14/2026,"-Meeting harian AI tax code validation
+-Menganalisis AI tax code validation backend"
+W12,Senin,8/17/2026,
+W12,Selasa,8/18/2026,"-Meeting harian AI tax code validation
+-Mencoba AI tax code validation backend"
+W12,Rabu,8/19/2026,"-Mencoba AI tax code validation backend
+-Mengikuti proses deployment pertama AI tax code validation"
+W12,Kamis,8/20/2026,-Menganalisis prompt engineering AI tax code validation backend dan membandingkannya dengan prompt pada POC
+W12,Jumat,8/21/2026,"-Menganalisis prompt backend terbaru
+-Meeting harian AI tax code validation"
+W13,Senin,8/24/2026,"-Menganalisis prompt backend terbaru
+-Meeting harian AI tax code validation"
+W13,Selasa,8/25/2026,LIBUR
+W13,Rabu,8/26/2026,"-Mengeksplorasi library scheduler python
+-Meeting harian AI tax code validation"
+W13,Kamis,8/27/2026,"-Membuat perencanaan spesifikasi scheduler python
+-Mengeksplorasi library scheduler python"
+W13,Jumat,8/28/2026,"-Membuat perencanaan spesifikasi scheduler python
+-Mengonfirmasi library scheduler python dengan mentor"
+W14,Senin,8/31/2026,"-Membuat fitur SAP scheduler
+-Mendapatkan revisi dari mentor"
+W14,Selasa,9/1/2026,"-Memodifikasi fitur SAP scheduler dengan menambahkan observability features pada skema basis data
+-Memperbaiki bug yang ada akibat perubahan skema basis data"
+W14,Rabu,9/2/2026,"-Memodifikasi fitur SAP scheduler dengan menambahkan observability features pada skema basis data
+-Memperbaiki bug yang ada akibat perubahan skema basis data"
+W14,Kamis,9/3/2026,"-Mengeksplorasi library PDF text extraction sebagai alternatif OCR
+-Mengeksplorasi Cohere Parse sebagai alternatif pay-as-you-go cloud OCR services"
+W14,Jumat,9/4/2026,"-Mengeksplorasi library PDF text extraction sebagai alternatif OCR
+-Mengonfirmasi flow PDF text extraction kepada mentor
+-Mengeksplorasi library markitdown dan PyMuPDF
+-Mengeksplorasi Cohere Parse sebagai alternatif pay-as-you-go cloud OCR services"
+W15,Senin,9/7/2026,"-Mengeksplorasi library markitdown dan PyMuPDF
+-Mengeksplorasi Cohere Parse sebagai alternatif pay-as-you-go cloud OCR services"
+W15,Selasa,9/8/2026,"-Mengeksplorasi library markitdown dan PyMuPDF
+-Mengeksplorasi Cohere Parse sebagai alternatif pay-as-you-go cloud OCR services"
+W15,Rabu,9/9/2026,"-Mengeksplorasi library markitdown dan PyMuPDF
+-Mengeksplorasi Cohere Parse sebagai alternatif pay-as-you-go cloud OCR services"
+W15,Kamis,9/10/2026,"-Mengeksplorasi library markitdown dan PyMuPDF
+-Mengeksplorasi Cohere Parse sebagai alternatif pay-as-you-go cloud OCR services"
+W15,Jumat,9/11/2026,"-UAT Phase 3 AI Tax Code Validation
+-Meeting harian AI tax code validation"
+W16,Senin,9/14/2026,"-UAT Phase 3 AI Tax Code Validation
+-Meeting harian AI tax code validation"
+W16,Selasa,9/15/2026,"-Meeting harian AI tax code validation
+-Mengeksplorasi library markitdown"
+W16,Rabu,9/16/2026,"-UAT Phase 3 AI Tax Code Validation
+-Menguji library markitdown dengan dokumen sample"
+W16,Kamis,9/17/2026,"-Menguji library markitdown dengan dokumen-dokumen asli testing
+-Membuat laporan tentang library PDF text extraction dan alternatif next action yang sebaiknya diambil"
+W16,Jumat,9/18/2026,"-Menguji library markitdown dengan dokumen-dokumen asli testing
+-Membuat laporan tentang library PDF text extraction dan alternatif next action yang sebaiknya diambil"
+W17,Senin,9/21/2026,"-Memahami flow bisnis setelah AI Tax Validation diimplementasikan
+-Memahami ERD as-is"
+W17,Selasa,9/22/2026,-Menganalisis flow bisnis setelah AI Tax Validation diimplementasikan
+W17,Rabu,9/23/2026,"-Menerima arahan mentor untuk membuat ERD
+-Merancang ERD baru pasca-revamp"
+W17,Kamis,9/24/2026,-Merancang ERD baru pasca-revamp
+W17,Jumat,9/25/2026,-Merancang ERD baru pasca-revamp
+W18,Senin,9/28/2026,-Membuat ERD baru pasca-revamp
+W18,Selasa,9/29/2026,"-Mendiskusikan rancangan ERD dengan mentor
+-Menerima feedback terkait rancangan ERD"
+W18,Rabu,9/30/2026,-Memperbaiki ERD pasca-revamp
+W18,Kamis,10/1/2026,-Memperbaiki ERD pasca-revamp
+W18,Jumat,10/2/2026,-Memperbaiki ERD pasca-revamp
+W19,Senin,10/5/2026,"-Mendapatkan arahan baru dari mentor terkait perubahan fokus tim untuk mengerjakan Three Ways Matching Invoice di existing application sebelum revamp
+-Membuat laporan awal terkait API AnalyzeExpense Textract"
+W19,Selasa,10/6/2026,-Melakukan analisis API AnalyzeExpense Textract
+W19,Rabu,10/7/2026,-Melakukan analisis API AnalyzeExpense Textract
+W19,Kamis,10/8/2026,-Melakukan analisis API AnalyzeExpense Textract
+W19,Jumat,10/9/2026,"-Membuat laporan feasibility implementasi API AnalyzeExpense Textract di sistem Three Ways Matching
+-Menerima feedback dari mentor terkait feasibility implementasi API AnalyzeExpense"
+W20,Senin,10/12/2026,-Melakukan analisis API AnalyzeExpense Textract
+W20,Selasa,10/13/2026,-Melakukan analisis API AnalyzeExpense Textract
+W20,Rabu,10/14/2026,-Memahami spesifikasi Invoice Three Ways Matching terbaru hasil diskusi dengan tim finance
+W20,Kamis,10/15/2026,"-Mendiskusikan spesifikasi Invoice Three Ways Matching terbaru dengan mentor
+-Menerima delegasi tugas berikutnya untuk memperluas kapabilitas api OCR agar bisa mengeluarkan output raw dan structured"
+W20,Jumat,10/16/2026,-Mengerjakan fitur ekstensi raw dan structured API OCR
+W21,Senin,10/19/2026,-Mengerjakan fitur ekstensi raw dan structured API OCR
+W21,Selasa,10/20/2026,-Mengerjakan fitur ekstensi raw dan structured API OCR
+W21,Rabu,10/21/2026,
+W21,Kamis,10/22/2026,
+W21,Jumat,10/23/2026,
+W22,Senin,10/26/2026,
+W22,Selasa,10/27/2026,
+W22,Rabu,10/28/2026,
+W22,Kamis,10/29/2026,
+W22,Jumat,10/30/2026,
+W23,Senin,11/2/2026,
+W23,Selasa,11/3/2026,
+W23,Rabu,11/4/2026,
+W23,Kamis,11/5/2026,
+W23,Jumat,11/6/2026,
+W24,Senin,11/9/2026,
+W24,Selasa,11/10/2026,
+W24,Rabu,11/11/2026,
+W24,Kamis,11/12/2026,
+W24,Jumat,11/13/2026,
+W25,Senin,11/16/2026,
+W25,Selasa,11/17/2026,
+W25,Rabu,11/18/2026,
+W25,Kamis,11/19/2026,
+W25,Jumat,11/20/2026,
+W26,Senin,11/23/2026,
+W26,Selasa,11/24/2026,
+W26,Rabu,11/25/2026,
+W26,Kamis,11/26/2026,
+W26,Jumat,11/27/2026,
+W27,Senin,11/30/2026,

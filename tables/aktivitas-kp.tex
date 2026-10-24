@@ -1,0 +1,55 @@
+% Dibuat dari Internship Activity Tracker - Main.csv; hanya 2 Juni--14 Juli 2026.
+\begingroup
+\small
+\singlespacing
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{>{\raggedright\arraybackslash}p{2.7cm} >{\raggedright\arraybackslash}p{\dimexpr\textwidth-2.7cm-4\tabcolsep\relax}}
+    \caption{Aktivitas kerja praktik selama 2 Juni--14 Juli 2026}\label{tab:aktivitas-kp} \\
+    \toprule
+    \textbf{Tanggal} & \textbf{Aktivitas} \\
+    \midrule
+    \endfirsthead
+    \multicolumn{2}{c}{\tablename\ \thetable\ (lanjutan)} \\
+    \toprule
+    \textbf{Tanggal} & \textbf{Aktivitas} \\
+    \midrule
+    \endhead
+    \midrule
+    \multicolumn{2}{r}{\textit{Bersambung ke halaman berikutnya}} \\
+    \endfoot
+    \bottomrule
+    \endlastfoot
+    2 Juni 2026 & - Onboarding terpusat HR \newline - Setup Company Email dan Microsoft Teams \newline - Pengelompokan Stream ke FATL (Finance, Accounting, Law and Tax) \newline - Pengelompokan dan perkenalan dengan mentor \\
+    3 Juni 2026 & - Onboarding IT (SDBS+BBS+FATL) \newline - Onboarding Stream (FATL) \newline - Pengenalan Ways of Working (WoW) \newline - Pendelegasian proyek Revamp Website Tukar Faktur \newline - Setup GitLab \newline - Setup Stream Booster \\
+    4 Juni 2026 & - Pengenalan Web Tukar Faktur \newline - Pembagian handbook, repository, dan URL Web Tukar Faktur \\
+    5 Juni 2026 & - Setup VPN \newline - Setup Jira \newline - Cloning repository ke local \\
+    8 Juni 2026 & - Memahami proses bisnis alur utama tukar faktur \\
+    9 Juni 2026 & - Memahami proses bisnis termin pembayaran tukar faktur \\
+    10 Juni 2026 & - Memahami proses bisnis review invoice submission \newline - Mempelajari syntax dasar PHP \newline - Memahami source code struktur codebase \\
+    11 Juni 2026 & - Memahami proses bisnis kasus PO internal \newline - Mempelajari syntax lanjutan PHP yang relevan \newline - Memahami source code entrypoint controller \\
+    12 Juni 2026 & - Memahami proses bisnis BAST \newline - Mempelajari syntax lanjutan PHP yang relevan \newline - Hosting staging secara lokal untuk analisis saat runtime \\
+    15 Juni 2026 & - Membuat fitur DS39-628: Menambahkan kolom receipt note pada email notifikasi dan kalimat reminder pada receipt note \newline - Meeting UAT internal fitur progress tracker \\
+    16 Juni 2026 & - Libur Imlek \\
+    17 Juni 2026 & - Membuat fitur DS39-632: Menambahkan kolom username submitter di laman raw data \newline - Meeting kickoff revamp web tukar faktur \\
+    18 Juni 2026 & - Mempelajari syntax lanjutan PHP yang relevan \newline - Memahami source code invoiceSubmissionController \\
+    19 Juni 2026 & - Mempelajari konsep framework Yii2 \newline - Memahami source code struktur logic Yii2 \\
+    22 Juni 2026 & - Pengenalan lingkungan dan fasilitas kantor \newline - Meeting diskusi isu outbound PO \& GR \newline - Mengeksplorasi berbagai alternatif software modelling untuk dokumentasi kondisi as-is codebase sebelum revamp \newline - Mempelajari intisari buku Working Effectively with Legacy Code untuk memudahkan proses revamp \\
+    23 Juni 2026 & - Meeting Pembahasan timeline kasar dan tech stack Revamp Web Tukar Faktur \newline - Meeting Penggunaan AI dalam workflow klasifikasi kode WHT pada item di invoice \newline - Pendelegasian proyek integrasi AI dalam Website Tukar Faktur \newline - Mengeksplorasi tools software modelling (mermaid, plantuml, figma extension) \newline - Membuat dokumentasi flowchart proses bisnis utama \newline - Memindahkan flowchart ke figjam stream FATL \\
+    24 Juni 2026 & - Membuat dokumentasi flowchart alur source code \newline - Membuat dokumentasi pemetaan proses bisnis dengan source code \newline - Membuat dokumentasi overview untuk memahami kedua perspektif secara garis besar \newline - Meeting Weekly Web Tukar Faktur: membahas bug fix dan to-be setelah revamp \newline - Meeting penggunaan AI in tukar faktur: mengidentifikasi pain point utama yaitu misinput material group oleh user saat membuat PR sehingga tax code salah dari awal \newline - Diskusi dengan mentor tentang alternatif pendekatan AI untuk automasi web tukar faktur antara menggunakan API LLM atau modelling sendiri \\
+    25 Juni 2026 & - Mempelajari backend from first principles \newline - Diskusi dengan mentor dan technology solution terkait solusi AI yang ingin diimplementasikan \newline - Memahami alur data pada SAP \newline - Memahami data-data yang diperlukan untuk membuat model AI \\
+    26 Juni 2026 & - Membuat flow chart kondisi as-is sistem koreksi WHT \newline - Membuat flow chart kondisi to-be sistem koreksi WHT dengan AI \newline - Membuat alternatif model AI yang digunakan untuk solusi sistem koreksi WHT \\
+    29 Juni 2026 & - Membuat pitch deck sistem rekomendasi WHT berbasis AI \newline - Menarik dataset purchase request historik dari production \newline - Mempelajari dataset purchase request historik yang akan digunakan \\
+    30 Juni 2026 & - Mempelajari dataset purchase request historik yang akan digunakan \newline - Merevisi flow sistem rekomendasi WHT berbasis AI \\
+    1 Juli 2026 & - Membuat iterasi pertama subsistem koreksi material group \newline - Melakukan validasi awal performa subsistem dengan random sampling dari data production \newline - Menjelaskan metode yang digunakan kepada technology solution terkait \newline - Mengidentifikasi kekurangan dari pendekatan saat ini dan melakukan evaluasi untuk perbaikan subsistem \\
+    2 Juli 2026 & - Melakukan eksplorasi SLM untuk menggantikan LLM pada subsistem koreksi material group \newline - Melakukan eksplorasi OCR lokal untuk subsistem ekstraksi nama item dari invoice (Unlimited OCR dan PaddleOCR) \newline - Melakukan eksplorasi specialized VLM untuk subsistem ekstraksi nama item sebagai alternatif OCR \\
+    3 Juli 2026 & - Membuat prototype AI-based Tax Code Validation System (Jupyter Notebook) \newline - Membuat prototype Invoice Item Name Extraction System (Jupyter Notebook) \\
+    6 Juli 2026 & - Melakukan eksplorasi pendekatan untuk subsistem Invoice Item Name Extraction \newline - Membuat prototype AI-based Tax Code Validation System untuk batching dengan model alternatif \newline - Membuat pengujian prototype AI-based Tax Code Validation System dengan data production \newline - Membuat laporan inkonsistensi data production \\
+    7 Juli 2026 & - Melakukan konfirmasi dengan technology solution terkait inkonsistensi data \newline - Mengajukan permohonan penggunaan data production untuk testing sistem AI kepada technology solution \newline - Mengonfirmasi data material group mapping yang sudah dilengkapi oleh tim Tax \\
+    8 Juli 2026 & - Melakukan EDA lanjut untuk menganalisis penyebab data kotor \newline - Melakukan survei harga API LLM untuk mendapatkan gambaran cost solusi \newline - Meminta data lanjutan untuk EDA \\
+    9 Juli 2026 & - Melakukan analisis data lebih lanjut dengan melakukan joining antartabel \\
+    10 Juli 2026 & - Menemukan pola data pemetaan kode pajak yang bisa digunakan untuk menyederhanakan solusi \newline - Mengomunikasikan penemuan tersebut ke technology solution dan mentor \\
+    13 Juli 2026 & - Mengomunikasikan penemuan tersebut ke stream lead dan tech lead \newline - Mendapatkan persetujuan untuk mengganti pendekatan solusi menggunakan penemuan tersebut \newline - Membuat POC Tax Code Validation System via Tax Object Classification (Pendekatan Baru) dalam medium jupyter notebook \newline - Melakukan data preparation untuk demo dengan user \newline - Mengidentifikasi beberapa edge case \\
+    14 Juli 2026 & - Mengomunikasikan penemuan sekaligus prototype ke TS lead \newline - Mendapat persetujuan TS lead untuk dilanjutkan ke tahap demo user \newline - Membuat interactive GUI untuk memudahkan demonstrasi POC \newline - Mendemokan POC ke user (Head of Finance) \newline - Mendapatkan persetujuan head of finance untuk dikembangkan lebih lanjut \\
+\end{longtable}
+\endgroup

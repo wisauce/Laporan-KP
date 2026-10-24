@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.8.19)  22 OCT 2026 23:40
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.8.19)  24 OCT 2026 18:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1295,62 +1295,36 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 ]) (06 Daftar Isi.tex
 [9] [10
 
-] (Laporan_KP.toc
-Underfull \vbox (badness 1127) has occurred while \output is active []
-
- [11])
+] (Laporan_KP.toc)
 \tf@toc=\write5
 \openout5 = `Laporan_KP.toc'.
 
-)
-(08 Daftar Gambar.tex [12] (Laporan_KP.lof)
+) (08 Daftar Gambar.tex [11] [12
+
+] (Laporan_KP.lof)
 \tf@lof=\write6
 \openout6 = `Laporan_KP.lof'.
 
-) (09 Daftar Tabel.tex [13
+)
+(09 Daftar Tabel.tex [13] [14
 
-] [14
-
-]
-(Laporan_KP.lot)
+] (Laporan_KP.lot)
 \tf@lot=\write7
 \openout7 = `Laporan_KP.lot'.
 
-) (10 Daftar Algoritma.tex [15] [16
-
-] (Laporan_KP.loa)
-\tf@loa=\write8
-\openout8 = `Laporan_KP.loa'.
-
-)
-(11 Daftar Listing.tex [17
-
-] [18
+) (11 Daftar Listing.tex
+[15] [16
 
 ] (Laporan_KP.lol)
-\tf@lol=\write9
-\openout9 = `Laporan_KP.lol'.
+\tf@lol=\write8
+\openout8 = `Laporan_KP.lol'.
 
-) (12 Daftar Singkatan.tex
-[19
+) (12 Daftar Singkatan.tex [17] [18
 
-] [20
+])
+(13 Daftar Simbol.tex [19] [20
 
-]
-Overfull \hbox (2.66713pt too wide) in alignment at lines 15--27
- [] [] [] 
- []
-
-) (13 Daftar Simbol.tex [21] [22
-
-]
-Overfull \hbox (16.93071pt too wide) in alignment at lines 15--104
- [] [] [] 
- []
-
-ignored error: Infinite glue shrinkage found in box being split [23]
-ignored error: Infinite glue shrinkage found in box being split [24]) [25]
-[26
+]) [21] [22
 
 ] (Bab I - Pendahuluan.tex
 Bab I.
@@ -1367,19 +1341,16 @@ Bab II.
 Underfull \vbox (badness 3058) has occurred while \output is active []
 
  [6]
-Underfull \vbox (badness 3989) has occurred while \output is active []
-
- [7])
-(Bab III - Pekerjaan.tex [8]
+[7]) (Bab III - Pekerjaan.tex [8]
 Bab III.
 [9
 
 
-] [10]
+]
 File: images/sistem as-is.png Graphic file (type bmp)
 <images/sistem as-is.png>
-
-Underfull \vbox (badness 5985) has occurred while \output is active []
+ [10]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
 [12] [13] (tables/tabel-aturan-wht.tex
@@ -1387,61 +1358,75 @@ Overfull \hbox (1.69308pt too wide) in paragraph at lines 12--12
 []|\TU/TimesNewRoman(0)/b/it/10.95 Identification 
  []
 
-) [14]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [15]
-Underfull \vbox (badness 1412) has occurred while \output is active []
-
- [16]
-[17] [18]
+) [14] (tables/tabel-deskripsi-wht.tex
+ignored error: Infinite glue shrinkage found in box being split [15]) [16]
+[17] [18] [19]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 212.
- [19] [20] [21]) (Bab IV - Penutup.tex [22]
+nput line 224.
+ [20] (tables/tabel-kandidat-prompt-wht.tex [21]
+ignored error: Infinite glue shrinkage found in box being split [22])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23]
+[24] [25]) (Bab IV - Penutup.tex [26]
 Bab IV.
-) [23
+[27
 
 
-] [24
+] [28] [29])
+Underfull \vbox (badness 4779) has occurred while \output is active []
+
+ [30]
+[31] [32
 
 ]
 
-LaTeX Warning: Empty bibliography on input line 96.
+LaTeX Warning: Empty bibliography on input line 97.
 
 (Lampiran-A.tex
 Lampiran A.
-(listings/binary-search-python.tex [25
+File: images/surat penerimaan magang.png Graphic file (type bmp)
+<images/surat penerimaan magang.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 7.
+See the caption package documentation for explanation.
+
+) (Lampiran-B.tex [33
 
 
-])) (Lampiran-B.tex [26]
+] [34
+
+]
 Lampiran B.
-) [27
+(tables/aktivitas-kp.tex
+ignored error: Infinite glue shrinkage found in box being split [35
 
-
-] [28
-
-] (Laporan_KP.aux)
+]
+ignored error: Infinite glue shrinkage found in box being split [36]
+ignored error: Infinite glue shrinkage found in box being split [37])) [38]
+(Laporan_KP.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `Laporan_KP.out' has not changed.
-(rerunfilecheck)             Checksum: 9367DA54C9719DC78415DD622D748DAF;8243.
+(rerunfilecheck)             Checksum: D6F58D4915E09CD3D77C715DA4C88ACF;6751.
 Package logreq Info: Writing requests to 'Laporan_KP.run.xml'.
 \openout1 = `Laporan_KP.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31640 strings out of 402987
- 607696 string characters out of 5448524
- 1913535 words of memory out of 5000000
- 59934 multiletter control sequences out of 15000+600000
+ 31637 strings out of 402987
+ 607959 string characters out of 5448524
+ 1863323 words of memory out of 5000000
+ 59931 multiletter control sequences out of 15000+600000
  636245 words of font info for 107 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 88i,12n,109p,1201b,2102s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,12n,109p,1201b,2071s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Laporan_KP.pdf (54 pages).
+Output written on Laporan_KP.pdf (60 pages).
