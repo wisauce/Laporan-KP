@@ -2,14 +2,14 @@
 \chapter{PENGEMBANGAN SISTEM KOREKSI TARIF PAJAK PENGHASILAN BERBASIS AI PADA WEB TUKAR FAKTUR}
 \label{chap:judul-pekerjaan}
 
-Bab ini menjelaskan persoalan bisnis, proses pengembangan solusi, pekerjaan pendukung, serta hasil yang diperoleh selama periode KP. Rincian kegiatan berdasarkan tanggal dicantumkan pada Lampiran \ref{lamp:aktivitas-kp}.
+Bab ini menjelaskan persoalan bisnis, proses pengembangan solusi, pekerjaan pendukung, serta hasil yang diperoleh selama periode KP. Sistem yang dikembangkan memanfaatkan \label{abbr:AI}AI untuk membantu pemeriksaan kode pajak. Rincian kegiatan berdasarkan tanggal dicantumkan pada Lampiran \ref{lamp:aktivitas-kp}.
 
 \section{Deskripsi Persoalan}
 \label{sec:deskripsi_persoalan}
 
-Proses pengadaan barang dan jasa di PT Paragon Technology and Innovation menggunakan \label{abbr:SAP}SAP untuk mencatat transaksi, sedangkan dokumen tagihan diperiksa melalui Web Tukar Faktur. Salah satu data yang diperiksa ialah kode pemotongan pajak atau \label{abbr:WHT}WHT, dari istilah \textit{withholding tax}. Kode WHT digunakan untuk menentukan kategori dan tarif PPh yang berlaku atas suatu transaksi. Ketepatan kode tersebut bergantung pada data yang digunakan dalam pemetaannya.
+Proses pengadaan barang dan jasa di PT Paragon Technology and Innovation menggunakan \label{abbr:SAP}SAP untuk mencatat transaksi, sedangkan dokumen tagihan diperiksa melalui Web Tukar Faktur. Salah satu data yang diperiksa ialah kode pemotongan pajak atau \label{abbr:WHT}WHT, dari istilah \textit{withholding tax}. Kode WHT digunakan untuk menentukan kategori dan tarif \label{abbr:PPh}PPh yang berlaku atas suatu transaksi. Ketepatan kode tersebut bergantung pada data yang digunakan dalam pemetaannya.
 
-Alur pengadaan dimulai ketika pengguna membuat \textit{purchase request} atau \label{abbr:PR}PR untuk mengajukan kebutuhan barang atau jasa. Pengguna memilih \textit{material group}, yaitu atribut yang mengelompokkan jenis barang atau jasa dalam sistem. Setelah disetujui, PR diproses menjadi PO. Masalah muncul ketika \textit{material group} yang dipilih tidak sesuai dengan barang atau jasa sebenarnya. Jika kesalahan itu tidak terdeteksi saat persetujuan PR, data yang keliru terbawa ke PO.
+Alur pengadaan dimulai ketika pengguna membuat \textit{purchase request} atau \label{abbr:PR}PR untuk mengajukan kebutuhan barang atau jasa. Pengguna memilih \textit{material group}, yaitu atribut yang mengelompokkan jenis barang atau jasa dalam sistem. Setelah disetujui, PR diproses menjadi \label{abbr:PO}PO. Masalah muncul ketika \textit{material group} yang dipilih tidak sesuai dengan barang atau jasa sebenarnya. Jika kesalahan itu tidak terdeteksi saat persetujuan PR, data yang keliru terbawa ke PO.
 
 SAP menentukan kode WHT melalui aturan pemetaan berdasarkan kombinasi atribut transaksi dan pemasok. Atribut yang digunakan meliputi hal berikut.
 \begin{enumerate}

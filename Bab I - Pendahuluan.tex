@@ -5,11 +5,9 @@
 % --- Latar Belakang ---
 \section{Latar Belakang}
 \label{sec:latar_belakang}
-Kerja praktik atau \label{abbr:KP}KP memberi mahasiswa kesempatan menerapkan pengetahuan akademik dalam pekerjaan profesional. Penulis memilih \label{abbr:PT}PT Paragon Technology and Innovation karena ingin mempelajari pengembangan sistem informasi yang digunakan dalam proses bisnis perusahaan. Sebagai peserta magang rekayasa perangkat lunak pada tim Web Tukar Faktur, penulis terlibat dalam pekerjaan yang berkaitan dengan pengadaan, pemeriksaan faktur, dan pengelolaan data perpajakan.
+Kerja praktik memberikan penulis kesempatan untuk mengenal praktik profesional serta menerapkan pengetahuan yang diperoleh selama perkuliahan. KP penulis dilaksanakan di \label{abbr:PT}PT Paragon Technology and Innovation, perusahaan Indonesia yang mengembangkan, memproduksi, dan mendistribusikan produk kecantikan. Dalam menjalankan fungsinya, perusahaan mengembangkan berbagai merek untuk memenuhi kebutuhan konsumen dan melayani pasar domestik maupun internasional \parencite{paragonAbout,paragonLookLab2022}. Arah perusahaan untuk menciptakan kebaikan yang lebih besar melalui inovasi, tata kelola yang baik, dan perbaikan berkelanjutan menjadi konteks pelaksanaan KP.
 
-Dalam proses pengadaan, data barang atau jasa dikelompokkan menggunakan atribut \textit{material group}. Atribut ini ikut menentukan kode pemotongan Pajak Penghasilan atau \label{abbr:PPh}PPh melalui aturan pemetaan pada SAP. Banyaknya kelompok yang tersedia dan kemiripan antaristilah dapat menyebabkan pilihan pengguna tidak sesuai dengan transaksi sebenarnya. Kesalahan pada data pengadaan tersebut berpotensi terbawa hingga pesanan pembelian atau \label{abbr:PO}PO dan menghasilkan kode pajak yang perlu diperiksa kembali saat faktur diproses.
-
-Pemeriksaan dan koreksi kode secara manual menambah pekerjaan tim \textit{Account Payable} serta dapat memperlambat pemrosesan faktur. Perbaikan pada tahap pengajuan pengadaan akan menyentuh proses dan kewenangan beberapa unit, sedangkan tim tempat penulis bekerja mengelola tahap pertukaran faktur. Karena itu, pekerjaan KP diarahkan pada sistem pendukung pemeriksaan kode pajak di Web Tukar Faktur. Sistem memanfaatkan isi faktur dan atribut transaksi untuk memberi rekomendasi yang dapat ditinjau sebelum pembukuan. Pendekatan berbasis \textit{artificial intelligence} atau \label{abbr:AI}AI digunakan setelah kandidat kode dipersempit melalui aturan yang sudah tersedia.
+Penulis memilih PT Paragon Technology and Innovation sebagai tempat KP karena ingin mempelajari pengembangan sistem informasi dalam lingkungan perusahaan yang menjalankan proses bisnis pada skala besar, mengingat PT Paragon Technology and Innovation merupakan salah satu perusahaan kosmetik terbesar di Indonesia yang memiliki kematangan teknologi yang tinggi. Penempatan pada unit kerja terkait memberikan kesempatan kepada penulis untuk memahami penerapan rekayasa perangkat lunak dalam mendukung proses operasional perusahaan sekaligus berkolaborasi dengan pemangku kepentingan.
 
 \section{Tempat dan Waktu Pelaksanaan}
 \label{sec:tempat_waktu}
@@ -19,9 +17,7 @@ Pelaksanaan KP berlangsung dari 2 Juni hingga 14 Juli 2026. Penulis bekerja seca
 
 \section{Ruang Lingkup Kerja Praktik}
 \label{sec:ruang_lingkup}
-Ruang lingkup KP mencakup pemahaman alur tukar faktur, analisis penyebab ketidaksesuaian kode pajak, eksplorasi data pemetaan, perancangan pendekatan klasifikasi, dan pengembangan sistem pendukung pemeriksaan. Penulis juga menelaah kebutuhan ekstraksi teks faktur, rekomendasi kode, skor penilaian, dan jalur pemeriksaan manusia. \label{abbr:POC}POC yang dikembangkan selama KP menjadi dasar penerapan sistem dalam proses operasional.
-
-Perubahan pada alur pembuatan dan persetujuan pengadaan, aturan perpajakan SAP, serta kebijakan pajak perusahaan berada di luar cakupan KP. Tahapan pekerjaan dan hasilnya dijelaskan pada Bab \ref{chap:judul-pekerjaan}.
+Selama KP, penulis berperan sebagai \textit{software engineer} yang bertugas melakukan modifikasi dan pemeliharaan \textit{codebase}, khususnya pada Web Tukar Faktur. Penulis juga mengikuti rapat dengan pemangku kepentingan ketika terdapat perubahan kebutuhan bisnis untuk memahami perubahan tersebut dan memastikan kesesuaiannya dengan perangkat lunak. Selain itu, penulis bertanggung jawab penuh untuk melakukan eksplorasi, analisis, dan eksekusi \label{abbr:POC}POC Sistem Koreksi Tarif Pajak Penghasilan sebagai dasar implementasi pada Web Tukar Faktur. Rincian pekerjaan dan hasilnya dijelaskan pada Bab \ref{chap:judul-pekerjaan}.
 
 \section{Sistematika Penulisan}
 Laporan ini terdiri atas empat bab dan lampiran pendukung.

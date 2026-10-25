@@ -1,31 +1,31 @@
 # Fdb version 4
-["biber Laporan_KP"] 1792931478.50231 "Laporan_KP.bcf" "Laporan_KP.bbl" "Laporan_KP" 1792932283.61944 0
-  "Laporan_KP.bcf" 1792932281 134643 553f475898c4c30920a931eb66c15ced "xelatex"
+["biber Laporan_KP"] 1792933140.93041 "Laporan_KP.bcf" "Laporan_KP.bbl" "Laporan_KP" 1792934103.93488 0
+  "Laporan_KP.bcf" 1792934101 134784 89098ff11332a4dd763d24902a4ee6f1 "xelatex"
   "daftar-pustaka.bib" 1792843493 6899 64ae4680c146c72c863f27f6fbf71a5c ""
   (generated)
   "Laporan_KP.bbl"
   "Laporan_KP.blg"
   (rewritten before read)
-["xdvipdfmx"] 1792932281.55674 "Laporan_KP.xdv" "Laporan_KP.pdf" "Laporan_KP" 1792932283.63079 0
-  "Laporan_KP.xdv" 1792932281 685364 63a01b1e435349e0ce9f6d2483ed05f4 "xelatex"
+["xdvipdfmx"] 1792934101.84533 "Laporan_KP.xdv" "Laporan_KP.pdf" "Laporan_KP" 1792934103.94699 0
+  "Laporan_KP.xdv" 1792934101 686324 be3507f60e19a7676dd40cf99db0eb44 "xelatex"
   (generated)
   "Laporan_KP.pdf"
   (rewritten before read)
-["xelatex"] 1792932277.59941 "c:/Users/wiseo/OneDrive/Documents/Laporan-KP/Laporan_KP.tex" "Laporan_KP.xdv" "Laporan_KP" 1792932283.61972 0
+["xelatex"] 1792934098.16782 "c:/Users/wiseo/OneDrive/Documents/Laporan-KP/Laporan_KP.tex" "Laporan_KP.xdv" "Laporan_KP" 1792934103.93521 0
   "01 Halaman Judul.tex" 1787114400 983 b345f236d30b7e375d1fae3ffb6e1c94 ""
   "02 Lembar Pengesahan.tex" 1792843799 881 d0583b158d90564d95f0c5dc5b5554fd ""
   "03 Lembar Pernyataan.tex" 1792842692 1010 1f0989ed500b22cbc54daf00dbf24685 ""
   "04 Abstrak.tex" 1792932276 2004 59dbba06c059b9e2526eeafea4941090 ""
-  "05 Kata Pengantar.tex" 1792842053 851 0b64200735096b6e59809832677e8313 ""
+  "05 Kata Pengantar.tex" 1792932416 875 b3217e84a4e92683d81b05aaadaaebb3 ""
   "06 Daftar Isi.tex" 1792829115 313 441c66b7041acb0ac8059c12d5adae2f ""
   "08 Daftar Gambar.tex" 1792829115 210 c8d0cfdfa2d3c9cf1b5d2ef1c6adc0c0 ""
   "09 Daftar Tabel.tex" 1792829115 208 b68bcdf778291b3c5b4cb0b2946e3bbc ""
   "11 Daftar Listing.tex" 1792829308 353 27a2cea51147d990239023042a9ac6e8 ""
   "12 Daftar Singkatan.tex" 1792843217 2838 2413c64a51b7c32a1ae2ccb63c2deac2 ""
   "13 Daftar Simbol.tex" 1792842459 1637 15aa0ab7350477ec96ce7f14ab22e09f ""
-  "Bab I - Pendahuluan.tex" 1792929210 3619 7758cf7f2c9f1a18151c3d6a453db477 ""
-  "Bab II - Organisasi dan Lingkungan.tex" 1792843493 5921 fccafd9b5184b7332fce3c20e8c749bc ""
-  "Bab III - Pekerjaan.tex" 1792930130 26068 c3641db3e73dee17170ede5d8af7f00d ""
+  "Bab I - Pendahuluan.tex" 1792933528 3138 1645e7ee41f1d405a8a113f976fc65e3 ""
+  "Bab II - Organisasi dan Lingkungan.tex" 1792934097 6289 c8b4e1487c3c086838dec2c623c4e891 ""
+  "Bab III - Pekerjaan.tex" 1792932907 26194 bc7b322f5c4bfdb88c0b8012cc90b231 ""
   "Bab IV - Penutup.tex" 1792930130 6332 bc5fd4a94ddd1d9deb0c5db12a275361 ""
   "C:/Users/wiseo/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1787113442 27176672 6b890e387c2dd79d0c8e051d61d4430f ""
   "C:/Users/wiseo/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136747054 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
@@ -185,15 +185,15 @@
   "KP.cls" 1792843759 11557 c71f8e57f546fdd76e24e5f8cd406ace ""
   "Lampiran-A.tex" 1792841069 363 6181da5e1b0fd3676bf83d463f4230d2 ""
   "Lampiran-B.tex" 1792842732 511 4764785506feb0ba200ff9897688b5a5 ""
-  "Laporan_KP.aux" 1792932281 17333 0c797c3bd55f2008adf14efc6b43fead "xelatex"
-  "Laporan_KP.bbl" 1792931480 24101 522d77849a2a28e08e10566b31232bc8 "biber Laporan_KP"
-  "Laporan_KP.lof" 1792932281 1635 97a6a40c926dc1aceaf76869f553470d "xelatex"
-  "Laporan_KP.lol" 1792932281 131 0d04b9b26d59b85804dcd4cc42a6cfaa "xelatex"
-  "Laporan_KP.lot" 1792932281 1783 6661b85bace2a48f336ce3c6c1b921f8 "xelatex"
-  "Laporan_KP.out" 1792932281 7098 661ba55f4f241b7d2aaef2d5de84e3be "xelatex"
-  "Laporan_KP.run.xml" 1792932281 2508 146a1874f408a22f83ea6eb73eb0ab71 "xelatex"
+  "Laporan_KP.aux" 1792934101 17693 8ab0bad5666a22355c200cc1274d174f "xelatex"
+  "Laporan_KP.bbl" 1792933142 24101 522d77849a2a28e08e10566b31232bc8 "biber Laporan_KP"
+  "Laporan_KP.lof" 1792934101 1761 6059fea754b1518bb9ea5139799d6075 "xelatex"
+  "Laporan_KP.lol" 1792934101 131 0d04b9b26d59b85804dcd4cc42a6cfaa "xelatex"
+  "Laporan_KP.lot" 1792934101 1909 4bad784e0163c6c9f0b802d41a90c586 "xelatex"
+  "Laporan_KP.out" 1792934101 7098 661ba55f4f241b7d2aaef2d5de84e3be "xelatex"
+  "Laporan_KP.run.xml" 1792934101 2508 146a1874f408a22f83ea6eb73eb0ab71 "xelatex"
   "Laporan_KP.tex" 1792843714 3638 37806f1759ea3add62ab40f22fb1e76d ""
-  "Laporan_KP.toc" 1792932281 4612 ad5b8b561d883b37492e11e6342f7419 "xelatex"
+  "Laporan_KP.toc" 1792934101 4738 6aac72f88a6aa71ff52f2c4ee1b51b7b "xelatex"
   "c:/Users/wiseo/OneDrive/Documents/Laporan-KP/Laporan_KP.tex" 1792843714 3638 37806f1759ea3add62ab40f22fb1e76d ""
   "images/ganesha.jpg" 1787112334 204312 5d8c52e248340399e87eea2dd3141700 ""
   "images/sistem as-is.png" 1792675445 1067844 aa0af0231787466d53077800d6066c48 ""
