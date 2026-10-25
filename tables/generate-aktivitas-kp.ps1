@@ -35,6 +35,11 @@ $rows = Import-Csv -LiteralPath $Source -Encoding UTF8 | ForEach-Object {
         if ($date -eq [datetime]::new(2026, 6, 16) -and $activity.Trim() -eq '- Libur Imlek') {
             $activity = '- Libur Tahun Baru Islam 1448 H'
         }
+        # Samakan istilah pada tabel laporan tanpa mengubah CSV sumber.
+        $activity = $activity -replace '(?i)\bInvoice Item Name Extraction System\b', 'Sistem Ekstraksi Nama Barang Faktur'
+        $activity = $activity -replace '(?i)\bInvoice Item Name Extraction\b', 'Ekstraksi Nama Barang Faktur'
+        $activity = $activity -replace '(?i)\bnama item dari invoice\b', 'nama barang faktur dari invoice'
+        $activity = $activity -replace '(?i)\bitem di invoice\b', 'barang faktur'
         [pscustomobject]@{ Date = $date; Activity = $activity }
     }
 } | Sort-Object Date

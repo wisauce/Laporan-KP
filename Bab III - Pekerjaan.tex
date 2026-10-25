@@ -2,30 +2,28 @@
 \chapter{PENGEMBANGAN SISTEM KOREKSI TARIF PAJAK PENGHASILAN BERBASIS AI PADA WEB TUKAR FAKTUR}
 \label{chap:judul-pekerjaan}
 
-Bab ini menjelaskan persoalan bisnis, proses pengembangan solusi, pekerjaan pendukung, serta hasil yang diperoleh selama periode KP. Sistem yang dikembangkan memanfaatkan \label{abbr:AI}AI untuk membantu pemeriksaan kode pajak. Rincian kegiatan berdasarkan tanggal dicantumkan pada Lampiran \ref{lamp:aktivitas-kp}.
-
 \section{Deskripsi Persoalan}
 \label{sec:deskripsi_persoalan}
 
-Proses pengadaan barang dan jasa di PT Paragon Technology and Innovation menggunakan \label{abbr:SAP}SAP untuk mencatat transaksi, sedangkan dokumen tagihan diperiksa melalui Web Tukar Faktur. Salah satu data yang diperiksa ialah kode pemotongan pajak atau \label{abbr:WHT}WHT, dari istilah \textit{withholding tax}. Kode WHT digunakan untuk menentukan kategori dan tarif \label{abbr:PPh}PPh yang berlaku atas suatu transaksi. Ketepatan kode tersebut bergantung pada data yang digunakan dalam pemetaannya.
+Proses pengadaan barang dan jasa di PT Paragon Technology and Innovation menggunakan \label{abbr:SAP}SAP untuk mencatat transaksi, sedangkan dokumen tagihan diperiksa melalui Web Tukar Faktur. Salah satu data yang diperiksa ialah kode pemotongan pajak atau \label{abbr:WHT}WHT \textit{withholding tax}. Kode WHT digunakan untuk menentukan kategori dan tarif \label{abbr:PPh}PPh yang berlaku atas suatu transaksi. Ketepatan kode tersebut bergantung pada berbagai data yang digunakan dalam pemetaannya.
 
-Alur pengadaan dimulai ketika pengguna membuat \textit{purchase request} atau \label{abbr:PR}PR untuk mengajukan kebutuhan barang atau jasa. Pengguna memilih \textit{material group}, yaitu atribut yang mengelompokkan jenis barang atau jasa dalam sistem. Setelah disetujui, PR diproses menjadi \label{abbr:PO}PO. Masalah muncul ketika \textit{material group} yang dipilih tidak sesuai dengan barang atau jasa sebenarnya. Jika kesalahan itu tidak terdeteksi saat persetujuan PR, data yang keliru terbawa ke PO.
+Alur pengadaan dimulai ketika pengguna membuat \textit{purchase request} (\label{abbr:PR}PR) untuk mengajukan kebutuhan barang atau jasa. Pada pembuatan PR, pengguna diharuskan untuk memilih salah satu \textit{material group}, yaitu atribut yang mengelompokkan jenis barang atau jasa dalam sistem. Setelah disetujui, PR diproses menjadi \textit{purchase order} (\label{abbr:PO}PO). Masalah muncul ketika \textit{material group} yang dipilih tidak sesuai dengan barang atau jasa sebenarnya. Jika kesalahan itu tidak terdeteksi saat persetujuan PR, data yang keliru terbawa ke PO.
 
-SAP menentukan kode WHT melalui aturan pemetaan berdasarkan kombinasi atribut transaksi dan pemasok. Atribut yang digunakan meliputi hal berikut.
+SAP menentukan kode WHT melalui aturan pemetaan berdasarkan kombinasi enam atribut transaksi dan pemasok, yaitu sebagai berikut.
 \begin{enumerate}
     \item \textit{Material group}, yaitu kelompok barang atau jasa yang dipilih dalam proses pengadaan dan diteruskan ke PO.
     \item \textit{Legal form}, yaitu bentuk pemasok yang membedakan antara badan dan perorangan.
     \item \textit{Identification number}, yaitu atribut yang memuat informasi surat atau keterangan perpajakan yang berlaku bagi pemasok, misalnya keterangan bagi usaha mikro, kecil, dan menengah atau \label{abbr:UMKM}UMKM. Atribut ini dapat kosong jika tidak ada dokumen terkait.
-    \item \textit{Construction service classification}, yaitu jenis perusahaan konstruksi. Atribut ini dapat kosong.
-    \item \textit{Entity country}, yaitu negara tempat entitas atau anak perusahaan Paragon yang melakukan transaksi berada, seperti Indonesia atau Malaysia.
+    \item \textit{Construction service classification}, yaitu jenis perusahaan konstruksi. Atribut ini hanya berlaku bagi pemasok yang bergerak di bidang konstruksi.
+    \item \textit{Entity country}, yaitu negara tempat entitas atau anak perusahaan Paragon yang melakukan transaksi berada, yang dalam konteks Paragon adalah antara Indonesia atau Malaysia.
     \item \textit{Vendor country}, yaitu negara asal pemasok yang bertransaksi dengan entitas Paragon.
 \end{enumerate}
 
-Dalam mekanisme tersebut, \textit{material group} ikut menentukan hasil pemetaan. SAP dapat menghasilkan kode yang sesuai dengan aturan, tetapi tidak sesuai dengan substansi transaksi jika kelompok yang dipilih sejak awal keliru. Karena itu, masalah yang ditangani ialah mutu data masukan, bukan perhitungan aturan pemetaan itu sendiri. Kesalahan ini dapat memengaruhi kategori dan tarif PPh yang digunakan.
+Dari enam faktor di atas, dapat dilihat bahwa \textit{material group} ikut menentukan hasil pemetaan. SAP dapat menghasilkan kode yang sesuai dengan aturan, tetapi tidak sesuai dengan substansi transaksi jika kelompok yang dipilih sejak awal keliru. Karena itu, masalah yang ditangani ialah mutu data masukan, bukan perhitungan aturan pemetaan itu sendiri. Kesalahan ini dapat memengaruhi kategori dan tarif PPh yang digunakan.
 
-Pada tahap pertukaran faktur, pemasok menyerahkan faktur, dokumen penerimaan barang atau \label{abbr:GR}GR, dan dokumen pendukung kepada tim \label{abbr:AP}\textit{Account Payable}. Melalui Web Tukar Faktur, AP membandingkan isi item faktur dengan \textit{material group} serta kode WHT yang tercatat pada SAP. Pemeriksaan ini diperlukan karena hasil pemetaan SAP mengikuti data pengadaan yang mungkin sudah keliru.
+Pada tahap pertukaran faktur, pemasok menyerahkan faktur, \textit{goods receipt} (\label{abbr:GR}GR), dan dokumen pendukung lainnya melalui portal Web Tukar Faktur. Melalui Web Tukar Faktur, AP membandingkan isi barang faktur dengan \textit{material group} serta kode WHT yang tercatat pada SAP. Pemeriksaan ini diperlukan karena hasil pemetaan SAP mengikuti data pengadaan yang mungkin sudah keliru.
 
-Jika kode WHT dinilai sesuai, transaksi dapat dilanjutkan ke pembukuan jurnal pada SAP. Jika tidak sesuai, transaksi memerlukan peninjauan perpajakan. Dokumen ditampung sementara sebagai \textit{parked document} sebelum kode dikoreksi dan jurnal dibukukan. Rangkaian pemeriksaan dan koreksi manual ini menambah pekerjaan pada tahap pemrosesan faktur.
+Jika kode WHT dinilai sesuai, transaksi dapat dilanjutkan ke pembukuan jurnal pada SAP. Jika tidak, transaksi memerlukan peninjauan perpajakan. Dokumen ditampung sementara sebagai \textit{parked document} sebelum kode dikoreksi dan jurnal dibukukan. Rangkaian pemeriksaan dan koreksi manual ini menambah pekerjaan pada tahap pemrosesan faktur.
 
 Alur dari pembuatan PR hingga pembukuan jurnal ditunjukkan pada Gambar \ref{fig:sistem-as-is}.
 
@@ -36,9 +34,9 @@ Alur dari pembuatan PR hingga pembukuan jurnal ditunjukkan pada Gambar \ref{fig:
     \label{fig:sistem-as-is}
 \end{figure}
 
-AP perlu memahami setiap item faktur dan menilai kesesuaiannya dengan data SAP. Kesalahan yang ditemukan memerlukan peninjauan dan koreksi sebelum pembukuan. Jika kesalahan luput dari pemeriksaan, kategori PPh yang digunakan juga dapat tidak sesuai dengan transaksi.
+AP perlu memahami setiap barang faktur dan menilai kesesuaiannya dengan data SAP. Kesalahan yang ditemukan memerlukan peninjauan dan koreksi sebelum pembukuan. Jika kesalahan luput dari pemeriksaan, kategori PPh yang digunakan juga dapat tidak sesuai dengan transaksi.
 
-Persoalan utama pekerjaan ini ialah membantu AP mengidentifikasi ketidaksesuaian kode WHT ketika \textit{material group} pada data pengadaan tidak menggambarkan transaksi sebenarnya. Penilaian perlu menggunakan isi faktur dan atribut pemetaan lain agar tidak hanya mengandalkan kelompok material yang telah tercatat. Kebutuhan tersebut menjadi dasar perancangan sistem pendukung pemeriksaan di Web Tukar Faktur.
+Persoalan utama pekerjaan ini adalah membantu AP mengidentifikasi ketidaksesuaian kode WHT ketika \textit{material group} pada data pengadaan tidak menggambarkan transaksi sebenarnya. Penilaian perlu menggunakan isi faktur dan atribut pemetaan lain agar tidak hanya mengandalkan \textit{material group} yang telah tercatat. Kebutuhan tersebut menjadi dasar perancangan sistem pendukung pemeriksaan di Web Tukar Faktur.
 
 \section{Proses Pengembangan Sistem Koreksi Kode WHT}
 \label{sec:proses_pengerjaan}
@@ -46,38 +44,44 @@ Persoalan utama pekerjaan ini ialah membantu AP mengidentifikasi ketidaksesuaian
 \subsection{Analisis Kebutuhan dan Ruang Lingkup}
 \label{subsec:analisis_kebutuhan_ruang_lingkup}
 
-Penulis memulai pekerjaan dengan mempelajari alur tukar faktur, peran pihak yang terlibat, serta hubungan antara data pengadaan dan dokumen tagihan. Analisis menunjukkan bahwa kesalahan \textit{material group} dari tahap PR dapat terbawa hingga PO dan baru tampak ketika AP membandingkan item faktur dengan data SAP. Oleh karena itu, sistem diarahkan untuk membantu pemeriksaan pada tahap pertukaran faktur, saat dokumen dan konteks transaksi sudah tersedia.
+Penulis memulai pekerjaan dengan mempelajari alur tukar faktur, peran pihak yang terlibat, serta hubungan antara data pengadaan dan dokumen tagihan. Analisis menunjukkan bahwa kesalahan \textit{material group} dari tahap PR dapat terbawa hingga PO dan baru tampak ketika AP membandingkan barang faktur dengan data SAP. Oleh karena itu, sistem diarahkan untuk membantu pemeriksaan pada tahap pertukaran faktur, saat dokumen dan konteks transaksi sudah tersedia.
 
 Pencegahan kesalahan pada saat PR dibuat akan menyentuh proses kerja unit lain. Tim Web Tukar Faktur tidak memiliki kewenangan untuk mengubah alur tersebut. Batasan ini menjadi alasan pemilihan titik pemeriksaan faktur sebagai ruang pengembangan.
 
-Sistem menggunakan isi faktur bersama atribut pemetaan SAP, yaitu \textit{material group}, \textit{legal form}, \textit{identification number}, \textit{construction service classification}, \textit{entity country}, dan \textit{vendor country}. Dari data tersebut, sistem memberikan rekomendasi kode WHT dan skor penilaian yang membantu menentukan tindak lanjut. Rekomendasi yang sesuai dengan SAP dan memenuhi ambang batas dapat diteruskan ke proses pembukuan, sedangkan perbedaan kode, skor rendah, atau keluaran yang tidak valid tetap memerlukan pemeriksaan AP dan, bila perlu, peninjauan tim perpajakan.
+Sistem menggunakan isi faktur bersama atribut pemetaan SAP, yaitu \textit{material group}, \textit{legal form}, \textit{identification number}, \textit{construction service classification}, \textit{entity country}, dan \textit{vendor country}. Dari data tersebut, sistem memberikan rekomendasi kode WHT dan skor kepercayaan yang membantu menentukan tindak lanjut. Rekomendasi yang sesuai dengan SAP dan memenuhi ambang batas dapat diteruskan ke proses pembukuan, sedangkan perbedaan kode, skor rendah, atau keluaran yang tidak valid tetap memerlukan pemeriksaan AP. Apabila diperlukan, submisi faktur juga akan ditinjau oleh tim perpajakan.
 
-Ruang lingkup pekerjaan meliputi analisis data, perancangan, pengembangan, dan penerapan komponen pendukung pemeriksaan pada Web Tukar Faktur. Aturan pajak SAP, kebijakan perpajakan, serta alur pembuatan dan persetujuan PR maupun PO tidak diubah. Kinerja klasifikasi dan ambang batas skor perlu dipantau serta dievaluasi secara berkala menggunakan transaksi nyata.
+Ruang lingkup pekerjaan meliputi analisis data, perancangan, pengembangan, dan penerapan komponen pendukung pemeriksaan pada Web Tukar Faktur. Aturan pajak SAP, kebijakan perpajakan, serta alur pembuatan dan persetujuan PR maupun PO tidak diubah.
 
 \subsection{\textit{Exploratory Data Analysis} dan Perumusan Pendekatan}
 \label{subsec:eda_perumusan_pendekatan}
 
-Analisis data eksploratif atau \label{abbr:EDA}EDA dilakukan untuk memahami struktur data yang dipakai dalam pemetaan kode WHT. Penulis menggunakan dua kelompok data: referensi berisi kode, deskripsi, dan contoh bagi 636 \textit{material group}, serta tabel pemetaan kode WHT berisi 46.660 baris. Banyaknya baris terutama berasal dari pengulangan kombinasi aturan pada kelompok material yang berbeda; jumlah itu tidak sama dengan jumlah aturan yang unik.
+\label{abbr:EDA}EDA dilakukan untuk memahami struktur data yang dipakai dalam pemetaan kode WHT. Penulis menggunakan dua kelompok data: referensi berisi kode, deskripsi, dan contoh bagi 636 \textit{material group}, serta tabel pemetaan antara enam faktor perpajakan dengan kode WHT, yang terdiri dari 46.660 baris. Alasan banyaknya baris pada pemetaan WHT adalah karena pengulangan kombinasi aturan pada \textit{material group} yang berbeda.
 
-Hipotesis awal yang dibahas bersama mentor ialah mengklasifikasikan item faktur ke dalam 636 \textit{material group} menggunakan model \textit{encoder}, misalnya \textit{Bidirectional Encoder Representations from Transformers} atau \label{abbr:BERT}BERT \parencite{devlin2019bert}. Pendekatan ini memerlukan persiapan data dan evaluasi klasifikasi dengan banyak kelas. Penulis kemudian mencoba \label{abbr:LLM}LLM dengan instruksi dan contoh pengelompokan. Dalam rancangan awal, hasil klasifikasi kelompok material akan digunakan untuk memetakan ulang kode WHT.
+Akar persoalan yang telah diidentifikasi ialah pemilihan \textit{material group} yang tidak sesuai dengan yang seharusnya. Oleh karena itu, gagasan awal yang terbesit adalah membangun sistem klasifikasi \textit{material group} berdasarkan informasi pada faktur. Hasil klasifikasi tersebut kemudian akan digunakan untuk memetakan ulang kode WHT melalui aturan pemetaan SAP yang berlaku, sehingga sistem dapat menghasilkan rekomendasi kode WHT yang sesuai dengan substansi transaksi.
 
-Eksperimen awal menunjukkan keterbatasan klasifikasi tersebut. Banyaknya kategori dan kemiripan beberapa nama kelompok menyulitkan pemilihan yang konsisten. Sebagai contoh, \textit{Material} dan \textit{Material (Untuk Event)} dapat mengarah ke perlakuan pajak yang berbeda. Penambahan seluruh kategori ke konteks model juga meningkatkan biaya pemrosesan. Karena hasil prototipe awal belum memadai, penulis meninjau kembali struktur data pemetaan.
+Hipotesis awal yang dibahas bersama mentor ialah mengklasifikasikan barang pada faktur ke dalam 636 \textit{material group} menggunakan model \textit{encoder}, misalnya \textit{Bidirectional Encoder Representations from Transformers} (\label{abbr:BERT}BERT) \parencite{devlin2019bert}. Pendekatan ini memerlukan data faktur berlabel untuk pelatihan dan evaluasi klasifikasi multikelas. Karena pihak bisnis belum memiliki data faktur berlabel dan membutuhkan fitur tersebut dalam waktu singkat, penulis meninjau kembali pendekatan ini.
 
-Penulis menelaah 46.660 baris data pemetaan dan menyusunnya menjadi 12 kondisi untuk merepresentasikan aturan pemetaan SAP dalam penentuan himpunan kandidat kode WHT. Kondisi tersebut menggunakan \textit{legal form}, \textit{identification number}, \textit{construction service classification}, \textit{entity country}, dan \textit{vendor country}. Ringkasannya disajikan pada Tabel \ref{tab:aturan-wht}.
+Penulis kemudian mencoba menggunakan \label{abbr:LLM}LLM dengan metode \textit{few shot classification}, yaitu klasifikasi yang dilakukan dengan memberikan instruksi beserta contoh pengelompokan. Dalam rancangan awal, hasil klasifikasi \textit{material group} akan digunakan untuk memetakan ulang kode WHT.
+
+Eksperimen awal menunjukkan keterbatasan klasifikasi tersebut. Banyaknya kategori dan kemiripan beberapa nama kelompok menyulitkan pemilihan yang konsisten. Sebagai contoh, \textit{Furnitur} dan \textit{Furnitur (Untuk Event)} dapat mengarah ke perlakuan pajak yang berbeda. Penambahan seluruh kategori ke konteks model juga meningkatkan biaya pemrosesan. Karena hasil prototipe awal belum memadai, penulis meninjau kembali struktur data pemetaan.
+
+Setelah melakukan eksplorasi lanjutan terhadap 46.660 baris data pemetaan, penulis menemukan pola menarik bahwa banyak baris mengulang kombinasi aturan perpajakan yang sama dan hanya berbeda pada \textit{material group}. Penulis kemudian menelusuri pengulangan tersebut untuk menyusun representasi yang lebih ringkas atas aturan pemetaan SAP. Hasilnya, aturan penentuan himpunan kandidat kode WHT dapat direpresentasikan menjadi 12 kondisi. Kondisi tersebut menggunakan \textit{legal form}, \textit{identification number}, \textit{construction service classification}, \textit{entity country}, dan \textit{vendor country}. Ringkasannya disajikan pada Tabel \ref{tab:aturan-wht}.
 
 \input{tables/tabel-aturan-wht.tex}
 
-Kondisi pada Tabel \ref{tab:aturan-wht} menyaring kandidat kode WHT sebelum klasifikasi. Kandidat tersebut dapat ditelusuri kembali ke kelompok material dalam data pemetaan. Namun, sekitar 300 kelompok material masih tersisa pada beberapa kondisi sehingga klasifikasi berdasarkan kelompok material tetap sulit dilakukan.
+Kondisi pada Tabel \ref{tab:aturan-wht} menyaring kandidat kode WHT sebelum klasifikasi. Kandidat tersebut dapat ditelusuri kembali ke \textit{material group} dalam data pemetaan. Namun, sekitar 300 \textit{material group} masih tersisa pada beberapa kondisi sehingga klasifikasi berdasarkan \textit{material group} tetap sulit dilakukan.
 
-Diskusi dengan tim keuangan memperjelas bahwa \textit{material group} terutama membantu pengelompokan pada proses pengadaan dan tidak selalu menjadi representasi langsung objek pajak. Pemahaman ini mengubah sasaran klasifikasi: setelah kandidat kode disaring, model menilai jenis objek pajak dari substansi item faktur. Sebagai contoh, perbedaan atribut perpajakan dapat memisahkan kandidat untuk transaksi jasa pada pemasok UMKM dan non-UMKM sebelum model membaca deskripsi item.
+Diskusi dengan tim keuangan memperjelas bahwa \textit{material group} utamanya digunakan untuk membantu pengelompokan pada proses pengadaan dan bukan merupakan representasi kaku dari objek pajak. Klarifikasi ini mendorong penulis untuk mengalihkan sasaran klasifikasi dari \textit{material group} ke objek pajak. Gagasan tersebut sebenarnya telah dipertimbangkan sebelumnya, tetapi penulis sempat ragu karena banyak objek pajak yang tampak tumpang tindih, terutama pada transaksi jasa. Sebagai contoh, jasa bagi pemasok UMKM dan jasa bagi perusahaan besar sama-sama dapat terlihat sebagai jasa dari nama barangnya, meskipun ketentuan pajaknya berbeda.
 
-Tabel \ref{tab:deskripsi-wht} merangkum 18 pasangan jenis dan kode WHT yang digunakan dalam pendekatan ini. ID menunjukkan Indonesia, sedangkan MY menunjukkan Malaysia. Kode harus dibaca bersama jenis dan negara karena kode yang sama dapat memiliki makna berbeda. Sebagai contoh, kode 1A pada jenis 42 berkaitan dengan pemasok pemegang surat keterangan UMKM, sedangkan kode 1A pada jenis 1 berkaitan dengan jasa dan biaya manajemen di Malaysia.
+Setelah kandidat kode WHT disaring menggunakan 12 kondisi pada Tabel \ref{tab:aturan-wht}, keraguan tersebut dapat diatasi. Kondisi tersebut terlebih dahulu membedakan atribut transaksi dan pemasok, termasuk perbedaan antara pemasok UMKM dan non-UMKM, sebelum model membaca deskripsi barang faktur. Akibatnya, kandidat kode WHT beserta jenis objek pajak dalam setiap kondisi menjadi lebih distingtif dan tidak lagi bercampur dengan kandidat dari kode WHT yang berbeda. Model kemudian cukup membedakan objek pajak di dalam daftar kandidat yang terbatas dan relevan dengan transaksi yang dinilai.
+
+Tabel \ref{tab:deskripsi-wht} merangkum 18 pasangan jenis dan kode WHT yang digunakan dalam pendekatan ini. Jenis WHT dan kode WHT diberlakukan sebagai satu pasangan; kode tidak dibaca secara terpisah dari jenisnya. Jenis WHT digunakan untuk membantu tim pajak menelusuri asal pasal yang berlaku bagi suatu kode. Sebagai contoh, kode 1A pada jenis 42 berkaitan dengan pemasok pemegang surat keterangan UMKM, sedangkan kode 1A pada jenis 1 berkaitan dengan jasa dan biaya manajemen.
 
 \input{tables/tabel-deskripsi-wht.tex}
 
-Selain pasangan kode pada tabel, klasifikasi dapat menghasilkan label \textit{NonTaxable} ketika item tidak cocok dengan objek pajak dalam daftar kandidat. Label ini bukan kode WHT.
+Selain pasangan kode pada tabel, klasifikasi dapat menghasilkan label \textit{NonTaxable} ketika barang faktur tidak cocok dengan objek pajak dalam daftar kandidat. Label ini bukan kode WHT.
 
-Penelaahan data pemetaan dan diskusi dengan tim keuangan mengubah pendekatan dari klasifikasi kelompok material menjadi klasifikasi objek pajak per item. Aturan kondisi SAP membatasi kandidat lebih dahulu, kemudian LLM menilai isi item berdasarkan kandidat yang tersisa. Pendekatan ini memperkecil ruang pilihan model dan mengurangi kebutuhan untuk memuat ratusan nama kelompok material ke dalam instruksi.
+Dengan alur tersebut, aturan kondisi SAP menyaring kandidat lebih dahulu. Setelahnya, LLM diperintahkan untuk menilai isi barang faktur berdasarkan kandidat yang tersisa. Pendekatan ini memperkecil ruang pilihan model dan mengurangi kebutuhan untuk memuat ratusan nama \textit{material group} ke dalam instruksi.
 
 \subsection{Perancangan Arsitektur Sistem dan Strategi Klasifikasi}
 \label{subsec:perancangan_arsitektur_strategi_klasifikasi}
@@ -86,10 +90,10 @@ Sistem terdiri atas dua subsistem. Subsistem ekstraksi mengubah faktur menjadi t
 
 Pemisahan ini dipilih agar klasifikasi tidak perlu membaca citra faktur secara langsung. Pemrosesan berbasis teks memudahkan penggunaan konteks faktur dalam instruksi model dan memungkinkan ekstraksi diuji secara terpisah dari klasifikasi. Pada eksplorasi awal, penulis mencoba model pengenalan karakter optis atau \label{abbr:OCR}OCR sumber terbuka. Uji coba menunjukkan bahwa model tersebut dapat mengekstraksi teks, tetapi memerlukan waktu dan sumber daya komputasi yang kurang sesuai dengan kebutuhan prototipe. Penulis kemudian memilih AWS Textract, layanan OCR yang telah tersedia di lingkungan perusahaan, melalui antarmuka pemrograman aplikasi atau \label{abbr:API}API. Istilah \label{abbr:AWS}AWS mengacu pada penyedia layanan komputasi awan yang digunakan. Pemilihan ini menghindarkan kebutuhan menyiapkan peladen dengan unit pemrosesan grafis atau \label{abbr:GPU}GPU khusus untuk tahap ekstraksi \parencite{awsTextractAsync}.
 
-Teks hasil OCR menjadi konteks bagi LLM saat menilai objek pajak. Nama item saja dapat menyesatkan; misalnya, \textit{Workout Stool} dapat dibaca sebagai pembelian barang meskipun faktur menunjukkan sewa perlengkapan acara. Karena itu, instruksi model memuat deskripsi item, konteks faktur, dan penjelasan kandidat yang diperiksa bersama tim keuangan. Konteks tambahan tersebut membantu model membedakan jenis transaksi, tetapi tidak menghilangkan seluruh kemungkinan salah klasifikasi.
+Teks hasil OCR menjadi konteks bagi LLM saat menilai objek pajak. Nama barang faktur saja dapat menyesatkan; misalnya, \textit{Workout Stool} dapat dibaca sebagai pembelian barang meskipun faktur menunjukkan sewa perlengkapan acara. Karena itu, instruksi model memuat deskripsi barang faktur, konteks faktur, dan penjelasan kandidat yang diperiksa bersama tim keuangan. Konteks tambahan tersebut membantu model membedakan jenis transaksi, tetapi tidak menghilangkan seluruh kemungkinan salah klasifikasi.
 
 Sistem menggunakan skor untuk menentukan kapan hasil model harus ditinjau manusia. Permintaan awal agar LLM langsung menyebut satu angka keyakinan tidak menjamin ukuran probabilitas yang terkalibrasi; kalibrasi perlu diuji pada tugas dan model yang digunakan \parencite{lin2022uncertainty}. Penulis kemudian merancang lima penilaian terpisah yang masing-masing bernilai benar atau salah dan diberi bobot sama. Skor akhir berada pada rentang 0 hingga 1.
-Apabila terdapat \label{sym:n}$n$ parameter dengan skor terstandardisasi \label{sym:si}$s_i$, skor keyakinan akhir dirumuskan sebagai berikut.
+Apabila terdapat \label{sym:n}$n$ parameter dengan skor terstandardisasi \label{sym:si}$s_i$, skor kepercayaan akhir dirumuskan sebagai berikut.
 \begin{equation}
     C = \frac{1}{n} \sum_{i=1}^{n} s_i
     \label{eq:confidence-score}
@@ -108,7 +112,7 @@ Penggunaan data perusahaan untuk pengembangan memerlukan perhatian terhadap kewe
 \section{Hasil Pekerjaan}
 \label{sec:hasil_pekerjaan}
 
-Hasil pengembangan berupa sistem yang menggabungkan ekstraksi teks faktur dan klasifikasi objek pajak. Sistem menerima faktur, item PO, dan atribut pemasok untuk menghasilkan rekomendasi kode WHT beserta alasan penilaiannya. Sistem tersebut telah digunakan dalam proses operasional Web Tukar Faktur.
+Hasil pengembangan berupa sistem yang menggabungkan ekstraksi teks faktur dan klasifikasi objek pajak. Sistem menerima faktur, barang faktur pada PO, dan atribut pemasok untuk menghasilkan rekomendasi kode WHT beserta alasan penilaiannya. Sistem tersebut telah digunakan dalam proses operasional Web Tukar Faktur.
 
 \subsection{Subsistem Ekstraksi Faktur}
 \label{subsec:hasil-ekstraksi-faktur}
@@ -126,35 +130,35 @@ Pemisahan subsistem membuat masukan klasifikasi tetap berupa teks faktur. Penyed
 \subsection{Subsistem Klasifikasi Kode WHT}
 \label{subsec:hasil-klasifikasi-wht}
 
-Subsistem klasifikasi menggunakan teks hasil OCR, item PO, dan lima atribut transaksi serta pemasok yang telah dijelaskan pada Subbab \ref{subsec:analisis_kebutuhan_ruang_lingkup}. Kelima atribut tersebut menentukan kandidat kode WHT melalui data referensi. Dengan demikian, LLM hanya menilai kode yang relevan bagi kombinasi atribut pada transaksi.
+Subsistem klasifikasi menggunakan teks hasil OCR, barang faktur pada PO, dan lima atribut transaksi serta pemasok yang telah dijelaskan pada Subbab \ref{subsec:analisis_kebutuhan_ruang_lingkup}. Kelima atribut tersebut menentukan kandidat kode WHT melalui data referensi. Dengan demikian, LLM hanya menilai kode yang relevan bagi kombinasi atribut pada transaksi.
 
 Penyaringan kandidat dan penyusunan instruksi model dirangkum dalam dokumen kerja \textit{WHT Candidate \& Prompt Mapping}. Dokumen tersebut menghubungkan setiap kondisi dengan kandidat kode, objek pajak pembeda, dan instruksi tambahan. Alur klasifikasi terdiri atas empat tahap berikut.
 \begin{enumerate}
     \item \textbf{Penyaringan kandidat.} Sistem mencocokkan lima atribut transaksi dan pemasok dengan aturan pada Tabel \ref{tab:aturan-wht} untuk memperoleh kandidat kode WHT yang relevan.
-    \item \textbf{Penyusunan konteks klasifikasi.} Instruksi utama memuat peran model, nama item SAP, nama pemasok, teks OCR, dan aturan pemilihan kode. Sistem kemudian menambahkan daftar kandidat beserta penjelasan objek pajak yang membedakannya.
-    \item \textbf{Klasifikasi transaksi.} LLM memilih kandidat berdasarkan jenis barang atau jasa pada item yang dinilai. Jika tidak ada objek pajak kandidat yang sesuai, model dapat memilih \textit{NonTaxable}.
-    \item \textbf{Pemeriksaan keluaran.} Sistem memeriksa bahwa hasil klasifikasi sesuai dengan daftar kandidat dan item PO yang diminta sebelum membentuk rekomendasi akhir.
+    \item \textbf{Penyusunan konteks klasifikasi.} Instruksi utama memuat peran model, nama barang faktur pada SAP, nama pemasok, teks OCR, dan aturan pemilihan kode. Sistem kemudian menambahkan daftar kandidat beserta penjelasan objek pajak yang membedakannya.
+    \item \textbf{Klasifikasi transaksi.} LLM memilih kandidat berdasarkan jenis barang atau jasa pada barang faktur yang dinilai. Jika tidak ada objek pajak kandidat yang sesuai, model dapat memilih \textit{NonTaxable}.
+    \item \textbf{Pemeriksaan keluaran.} Sistem memeriksa bahwa hasil klasifikasi sesuai dengan daftar kandidat dan barang faktur pada PO yang diminta sebelum membentuk rekomendasi akhir.
 \end{enumerate}
 
-Instruksi utama digunakan pada seluruh kondisi. Instruksi tersebut memuat nama item SAP, nama pemasok, dan teks OCR sebagai konteks. Model diminta menilai item SAP, memilih satu kode dari daftar kandidat, serta menjelaskan alasannya. Jika tidak ada kandidat yang cocok, model memilih \textit{NonTaxable}.
+Instruksi utama digunakan pada seluruh kondisi. Instruksi tersebut memuat nama barang faktur pada SAP, nama pemasok, dan teks OCR sebagai konteks. Model diminta menilai barang faktur pada SAP, memilih satu kode dari daftar kandidat, serta menjelaskan alasannya. Jika tidak ada kandidat yang cocok, model memilih \textit{NonTaxable}.
 
 Kode \ref{lst:prompt-instruksi-wht} menampilkan cuplikan instruksi pada fungsi \texttt{build\_prompt}. Cuplikan ini menunjukkan konteks masukan, pembatasan kandidat, dan contoh klasifikasi. Teks kode dipertahankan sesuai sumbernya.
 
 \begin{lstlisting}[caption={Cuplikan instruksi utama untuk klasifikasi WHT}, label={lst:prompt-instruksi-wht}, frame=single, captionpos=t, numbers=none]
 prompt = f"""
-Anda adalah tax analyst yang bertugas menentukan WHT Code berdasarkan deskripsi item procurement.
+Anda adalah tax analyst yang bertugas menentukan WHT Code berdasarkan deskripsi barang faktur.
 
-Item Name (dari SAP): "{item_name}"
+Nama Barang Faktur (dari SAP): "{item_name}"
 Vendor Name: "{req.vendor_name}"
 
-TEKS OCR INVOICE (HANYA UNTUK REFERENSI JENIS ITEM):
+TEKS OCR INVOICE (HANYA UNTUK REFERENSI JENIS BARANG FAKTUR):
 {req.ocr_result}
 
 Instruksi:
-1. Identifikasi objek pajak berdasarkan deskripsi item SAP.
-   Gunakan OCR untuk membantu memahami jenis/sifat item.
+1. Identifikasi objek pajak berdasarkan deskripsi barang faktur pada SAP.
+   Gunakan OCR untuk membantu memahami jenis atau sifat barang faktur.
 2. Pilih SATU WHT Code dari daftar kandidat yang diberikan.
-3. Jika item tidak sesuai dengan seluruh kandidat,
+3. Jika barang faktur tidak sesuai dengan seluruh kandidat,
    pilih "NonTaxable".
 4. Berikan alasan singkat pemilihan WHT Code.
 
@@ -171,31 +175,31 @@ Tabel \ref{tab:kandidat-prompt-wht} memuat kandidat dan teks tambahan dari dokum
 
 \input{tables/tabel-kandidat-prompt-wht.tex}
 
-Kondisi keempat memiliki kandidat \texttt{42/1A} dan \texttt{42/1C}. Instruksi tambahan membedakan objek pajak bagi pemasok UMKM. Model menilai apakah item termasuk objek pada kode 1A, sewa tanah atau bangunan pada kode 1C, atau tidak sesuai dengan kedua kandidat. Pilihan \textit{NonTaxable} tetap diperlukan meskipun hanya ada satu kandidat.
+Kondisi keempat memiliki kandidat \texttt{42/1A} dan \texttt{42/1C}. Instruksi tambahan membedakan objek pajak bagi pemasok UMKM. Model menilai apakah barang faktur termasuk objek pada kode 1A, sewa tanah atau bangunan pada kode 1C, atau tidak sesuai dengan kedua kandidat. Pilihan \textit{NonTaxable} tetap diperlukan meskipun hanya ada satu kandidat.
 
-Untuk setiap item PO, sistem membandingkan dua hasil: kode dari pemetaan SAP berdasarkan data yang tercatat dan kode dari klasifikasi isi transaksi oleh LLM. Klasifikasi menggunakan nama item, teks faktur, dan daftar kandidat hasil penyaringan. Item dalam satu permintaan diproses dengan konteks faktur yang sama. Jika keluaran model tidak sesuai dengan item atau memuat kode di luar kandidat, sistem melakukan satu kali percobaan ulang. Keluaran yang tetap tidak valid diberi status \textit{NEED\_REVIEW}.
+Untuk setiap barang faktur pada PO, sistem membandingkan dua hasil: kode dari pemetaan SAP berdasarkan data yang tercatat dan kode dari klasifikasi isi transaksi oleh LLM. Klasifikasi menggunakan nama barang faktur, teks faktur, dan daftar kandidat hasil penyaringan. Barang faktur dalam satu permintaan diproses dengan konteks faktur yang sama. Jika keluaran model tidak sesuai dengan barang faktur atau memuat kode di luar kandidat, sistem melakukan satu kali percobaan ulang. Keluaran yang tetap tidak valid diberi status \textit{NEED\_REVIEW}.
 
 LLM hanya memilih pasangan jenis dan kode WHT dari kandidat yang tersedia. Negara, tarif, dan deskripsi objek pajak untuk keluaran diambil dari data referensi, bukan dibuat oleh model. Validasi keluaran ini mencegah kode atau tarif di luar referensi disampaikan sebagai rekomendasi.
 
 
-Hasil klasifikasi per item dinyatakan melalui empat status berikut.
+Hasil klasifikasi untuk setiap barang faktur dinyatakan melalui empat status berikut.
 \begin{itemize}
     \item \textit{MATCH} menunjukkan bahwa klasifikasi berdasarkan substansi faktur sesuai dengan pemetaan yang telah ada.
     \item \textit{RECOMMENDATION} menunjukkan perbedaan antara hasil klasifikasi dan pemetaan SAP yang perlu ditinjau.
-    \item \textit{NON\_TAXABLE} menunjukkan bahwa item tidak cocok dengan objek pajak dalam kandidat yang tersedia.
+    \item \textit{NON\_TAXABLE} menunjukkan bahwa barang faktur tidak cocok dengan objek pajak dalam kandidat yang tersedia.
     \item \textit{NEED\_REVIEW} menunjukkan bahwa konteks atau keluaran model belum memadai dan memerlukan pemeriksaan manusia.
 \end{itemize}
 
-Skor penilaian disusun dari lima parameter bernilai benar atau salah berikut.
+skor kepercayaan disusun dari lima parameter bernilai benar atau salah berikut.
 \begin{itemize}
-    \item \textbf{Kejelasan nama item SAP:} nama item cukup deskriptif untuk menentukan jenis barang atau jasa tanpa memerlukan informasi tambahan.
+    \item \textbf{Kejelasan nama barang faktur pada SAP:} nama barang faktur cukup deskriptif untuk menentukan jenis barang atau jasa tanpa memerlukan informasi tambahan.
     \item \textbf{Kecukupan deskripsi faktur:} teks hasil OCR terbaca dengan baik dan memuat informasi yang memadai untuk memahami faktur.
     \item \textbf{Kejelasan pembeda barang dan jasa:} substansi transaksi dapat dibedakan secara jelas sebagai pengadaan barang atau penyerahan jasa.
-    \item \textbf{Tidak adanya tumpang-tindih objek pajak:} item tidak memiliki ambiguitas antara dua atau lebih objek pajak dalam daftar kandidat.
-    \item \textbf{Kesesuaian item SAP dengan faktur:} nama item pada SAP dan deskripsi pada faktur merujuk pada barang atau jasa yang sama.
+    \item \textbf{Tidak adanya tumpang-tindih objek pajak:} barang faktur tidak memiliki ambiguitas antara dua atau lebih objek pajak dalam daftar kandidat.
+    \item \textbf{Kesesuaian barang faktur pada SAP dengan faktur:} nama barang faktur pada SAP dan deskripsi pada faktur merujuk pada barang atau jasa yang sama.
 \end{itemize}
 
-Kelima parameter berbobot sama. Skor akhir adalah proporsi parameter yang bernilai benar, sesuai Persamaan \ref{eq:confidence-score}. Keluaran sistem mencakup rekomendasi kode, objek pajak dari data referensi, tarif terkait, alasan klasifikasi, dan skor untuk setiap item PO. Skor ini membantu memilah kasus untuk ditinjau, tetapi belum dapat ditafsirkan sebagai peluang bahwa rekomendasi benar.
+Kelima parameter berbobot sama. Skor akhir adalah proporsi parameter yang bernilai benar, sesuai Persamaan \ref{eq:confidence-score}. Keluaran sistem mencakup rekomendasi kode, objek pajak dari data referensi, tarif terkait, alasan klasifikasi, dan skor untuk setiap barang faktur pada PO. Skor ini membantu memilah kasus untuk ditinjau, tetapi belum dapat ditafsirkan sebagai peluang bahwa rekomendasi benar.
 
 \subsection{Implementasi dan Integrasi dengan Web Tukar Faktur}
 \label{subsec:hasil-integrasi-web-tukar-faktur}
@@ -207,7 +211,7 @@ Pertama, unggahan faktur dipisahkan dari dokumen pendukung. Pada alur sebelumnya
 Kedua, rekomendasi sistem dibandingkan dengan kode WHT pada SAP untuk menentukan kebutuhan peninjauan. Jalur pemeriksaannya sebagai berikut.
 \begin{itemize}
     \item \textbf{Kode sesuai dan skor memenuhi ambang batas:} faktur dapat diteruskan ke proses pembukuan.
-    \item \textbf{Kode berbeda:} AP memeriksa perbedaan tersebut meskipun skor penilaian tinggi.
+    \item \textbf{Kode berbeda:} AP memeriksa perbedaan tersebut meskipun skor kepercayaan tinggi.
     \item \textbf{Kode sesuai, tetapi skor rendah:} AP tetap memeriksa karena dasar rekomendasinya belum memadai.
 \end{itemize}
 Faktur tanpa hasil klasifikasi yang valid juga diarahkan kepada AP. Dengan demikian, pemeriksaan manusia tetap tersedia untuk ketidaksesuaian dan kasus yang belum meyakinkan.

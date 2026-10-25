@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.8.19)  25 OCT 2026 20:14
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.8.19)  25 OCT 2026 21:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1210,11 +1210,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ) (12 Daftar Singkatan.tex [17] [18
 
-]
-
-LaTeX Warning: Reference `abbr:KP' on page xix undefined on input line 41.
-
-) (13 Daftar Simbol.tex [19] [20
+]) (13 Daftar Simbol.tex [19] [20
 
 ]) [21] [22
 
@@ -1237,22 +1233,21 @@ Bab III.
 ]
 File: images/sistem as-is.png Graphic file (type bmp)
 <images/sistem as-is.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [8] [9] (tables/tabel-aturan-wht.tex) [10] (tables/tabel-deskripsi-wht.tex [11]) [12] [13] [14] [15]
+ [8] [9] [10] (tables/tabel-aturan-wht.tex) [11] (tables/tabel-deskripsi-wht.tex
+tables/tabel-deskripsi-wht.tex:41: ignored error: Infinite glue shrinkage found in box being split [12]) [13] [14] [15]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 143.
- [16] (tables/tabel-kandidat-prompt-wht.tex
-tables/tabel-kandidat-prompt-wht.tex:109: ignored error: Infinite glue shrinkage found in box being split [17]
-tables/tabel-kandidat-prompt-wht.tex:109: ignored error: Infinite glue shrinkage found in box being split [18]) [19] [20]) (Bab IV - Penutup.tex [21] [22
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 147.
+ [16] (tables/tabel-kandidat-prompt-wht.tex [17]
+tables/tabel-kandidat-prompt-wht.tex:109: ignored error: Infinite glue shrinkage found in box being split [18])
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-]
+ [19] [20] [21]) (Bab IV - Penutup.tex [22]
 Bab IV.
 [23
+
 
 ] [24]) [25] [26
 
@@ -1285,10 +1280,6 @@ tables/aktivitas-kp.tex:54: ignored error: Infinite glue shrinkage found in box 
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `Laporan_KP.out' has not changed.
 (rerunfilecheck)             Checksum: 661BA55F4F241B7D2AAEF2D5DE84E3BE;7098.
 Package logreq Info: Writing requests to 'Laporan_KP.run.xml'.
@@ -1298,10 +1289,10 @@ Package logreq Info: Writing requests to 'Laporan_KP.run.xml'.
 Here is how much of TeX's memory you used:
  33251 strings out of 402987
  640579 string characters out of 5448524
- 1965145 words of memory out of 5000000
+ 1962080 words of memory out of 5000000
  61508 multiletter control sequences out of 15000+600000
  636245 words of font info for 107 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 91i,12n,141p,1652b,7221s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 91i,12n,141p,1699b,7221s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Laporan_KP.xdv (56 pages, 686324 bytes).
+Output written on Laporan_KP.xdv (56 pages, 704128 bytes).

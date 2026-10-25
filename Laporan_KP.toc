@@ -52,12 +52,12 @@
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \contentsline {subsection}{\numberline {III.2.4}Pekerjaan Pendukung dan Praktik Profesional}{14}{subsection.3.2.4}%
-\contentsline {section}{\numberline {III.3}Hasil Pekerjaan}{14}{section.3.3}%
-\contentsline {subsection}{\numberline {III.3.1}Subsistem Ekstraksi Faktur}{14}{subsection.3.3.1}%
+\contentsline {section}{\numberline {III.3}Hasil Pekerjaan}{15}{section.3.3}%
+\contentsline {subsection}{\numberline {III.3.1}Subsistem Ekstraksi Faktur}{15}{subsection.3.3.1}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {subsection}{\numberline {III.3.2}Subsistem Klasifikasi Kode WHT}{15}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {III.3.3}Implementasi dan Integrasi dengan Web Tukar Faktur}{20}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {III.3.2}Subsistem Klasifikasi Kode WHT}{16}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {III.3.3}Implementasi dan Integrasi dengan Web Tukar Faktur}{21}{subsection.3.3.3}%
 \contentsline {chapter}{\numberline {IV}PENUTUP}{23}{chapter.4}%
 \contentsline {section}{\numberline {IV.1}Rangkuman Pelaksanaan Pekerjaan}{23}{section.4.1}%
 \contentsline {section}{\numberline {IV.2}Rangkuman Hasil Pekerjaan}{23}{section.4.2}%
