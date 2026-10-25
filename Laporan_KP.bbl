@@ -16,5 +16,564 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{awsTextractAsync}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3eb2c1a57a8160029f036e3dcbf84bf1}{%
+           family={{Amazon Web Services}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{bibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorbibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authornamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Processing Documents Asynchronously}
+      \field{urlday}{24}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.aws.amazon.com/textract/latest/dg/async.html
+      \endverb
+      \verb{url}
+      \verb https://docs.aws.amazon.com/textract/latest/dg/async.html
+      \endverb
+    \endentry
+    \entry{devlin2019bert}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=13202969e372bc82318f9629cbdd199b}{%
+           family={Devlin},
+           familyi={D\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a45784fe7163b45f11d166564f5d24b6}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={Ming-Wei},
+           giveni={M\bibinithyphendelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8dde73b4194f5bc4230c4808f3fc1534}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Kenton},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b92aa283415413bb8d2a1548716d0c7d}{%
+           family={Toutanova},
+           familyi={T\bibinitperiod},
+           given={Kristina},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{ad8e2e2a80d28ade21e86852b804fc9b}
+      \strng{fullhash}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \strng{fullhashraw}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \strng{bibnamehash}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \strng{authorbibnamehash}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \strng{authornamehash}{ad8e2e2a80d28ade21e86852b804fc9b}
+      \strng{authorfullhash}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \strng{authorfullhashraw}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies}
+      \field{title}{{BERT}: Pre-training of Deep Bidirectional Transformers for Language Understanding}
+      \field{year}{2019}
+      \field{pages}{4171\bibrangedash 4186}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.18653/v1/N19-1423
+      \endverb
+      \verb{urlraw}
+      \verb https://aclanthology.org/N19-1423/
+      \endverb
+      \verb{url}
+      \verb https://aclanthology.org/N19-1423/
+      \endverb
+    \endentry
+    \entry{lin2022uncertainty}{misc}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=00fd40e4b8f963e9edd28ee849b64ef0}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Stephanie},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9e4edc142b0564cbbb1cf93a401e4434}{%
+           family={Hilton},
+           familyi={H\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6b07bfe62c5870808c4d460a3275f391}{%
+           family={Evans},
+           familyi={E\bibinitperiod},
+           given={Owain},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3be27770c900ce3f287decb97963365c}
+      \strng{fullhash}{5859ef73d57f8294b3d2194eec5bbd72}
+      \strng{fullhashraw}{5859ef73d57f8294b3d2194eec5bbd72}
+      \strng{bibnamehash}{5859ef73d57f8294b3d2194eec5bbd72}
+      \strng{authorbibnamehash}{5859ef73d57f8294b3d2194eec5bbd72}
+      \strng{authornamehash}{3be27770c900ce3f287decb97963365c}
+      \strng{authorfullhash}{5859ef73d57f8294b3d2194eec5bbd72}
+      \strng{authorfullhashraw}{5859ef73d57f8294b3d2194eec5bbd72}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{title}{Teaching Models to Express Their Uncertainty in Words}
+      \field{year}{2022}
+      \verb{eprint}
+      \verb 2205.14334
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2205.14334
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2205.14334
+      \endverb
+    \endentry
+    \entry{paragonAbout}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f4ba0ae1831c47f8cf10c3abe2537c83}{%
+           family={{PT Paragon Technology and Innovation}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{fullhash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{fullhashraw}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{bibnamehash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{authorbibnamehash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{authornamehash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{authorfullhash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{authorfullhashraw}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \field{extraname}{1}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{About Paragon}
+      \field{urlday}{24}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.paragon-innovation.com/about-us/1000
+      \endverb
+      \verb{url}
+      \verb https://www.paragon-innovation.com/about-us/1000
+      \endverb
+    \endentry
+    \entry{paragonLookLab2022}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f4ba0ae1831c47f8cf10c3abe2537c83}{%
+           family={{PT Paragon Technology and Innovation}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{fullhash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{fullhashraw}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{bibnamehash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{authorbibnamehash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{authornamehash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{authorfullhash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{authorfullhashraw}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \field{extraname}{2}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Paragon Launched LookLab: Beauty Lifestyle Store in Indonesia}
+      \field{urlday}{24}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.paragon-innovation.com/post/news/yBHKiwOyoCdBxis
+      \endverb
+      \verb{url}
+      \verb https://www.paragon-innovation.com/post/news/yBHKiwOyoCdBxis
+      \endverb
+    \endentry
+    \entry{paragonIHYA2023}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f4ba0ae1831c47f8cf10c3abe2537c83}{%
+           family={{PT Paragon Technology and Innovation}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{fullhash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{fullhashraw}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{bibnamehash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{authorbibnamehash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{authornamehash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{authorfullhash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{authorfullhashraw}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \field{extraname}{3}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Paragon Won Again, Received 3 Awards at Indonesia Halal Industry Awards 2023}
+      \field{urlday}{24}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.paragon-innovation.com/post/news/6e4fyM4GUGW07MJ
+      \endverb
+      \verb{url}
+      \verb https://www.paragon-innovation.com/post/news/6e4fyM4GUGW07MJ
+      \endverb
+    \endentry
+    \entry{libur2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9ca2f2625f1297d7f2100d5ad80948eb}{%
+           family={{Sekretariat Negara Republik Indonesia}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{9ca2f2625f1297d7f2100d5ad80948eb}
+      \strng{fullhash}{9ca2f2625f1297d7f2100d5ad80948eb}
+      \strng{fullhashraw}{9ca2f2625f1297d7f2100d5ad80948eb}
+      \strng{bibnamehash}{9ca2f2625f1297d7f2100d5ad80948eb}
+      \strng{authorbibnamehash}{9ca2f2625f1297d7f2100d5ad80948eb}
+      \strng{authornamehash}{9ca2f2625f1297d7f2100d5ad80948eb}
+      \strng{authorfullhash}{9ca2f2625f1297d7f2100d5ad80948eb}
+      \strng{authorfullhashraw}{9ca2f2625f1297d7f2100d5ad80948eb}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Inilah SKB 3 Menteri Libur Nasional dan Cuti Bersama 2026}
+      \field{urlday}{24}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026
+      \endverb
+      \verb{url}
+      \verb https://www.setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global/global}
+    \entry{awsTextractAsync}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3eb2c1a57a8160029f036e3dcbf84bf1}{%
+           family={{Amazon Web Services}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{bibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorbibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authornamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Processing Documents Asynchronously}
+      \field{urlday}{24}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.aws.amazon.com/textract/latest/dg/async.html
+      \endverb
+      \verb{url}
+      \verb https://docs.aws.amazon.com/textract/latest/dg/async.html
+      \endverb
+    \endentry
+    \entry{devlin2019bert}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=13202969e372bc82318f9629cbdd199b}{%
+           family={Devlin},
+           familyi={D\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a45784fe7163b45f11d166564f5d24b6}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={Ming-Wei},
+           giveni={M\bibinithyphendelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8dde73b4194f5bc4230c4808f3fc1534}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Kenton},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b92aa283415413bb8d2a1548716d0c7d}{%
+           family={Toutanova},
+           familyi={T\bibinitperiod},
+           given={Kristina},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{ad8e2e2a80d28ade21e86852b804fc9b}
+      \strng{fullhash}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \strng{fullhashraw}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \strng{bibnamehash}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \strng{authorbibnamehash}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \strng{authornamehash}{ad8e2e2a80d28ade21e86852b804fc9b}
+      \strng{authorfullhash}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \strng{authorfullhashraw}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies}
+      \field{title}{{BERT}: Pre-training of Deep Bidirectional Transformers for Language Understanding}
+      \field{year}{2019}
+      \field{pages}{4171\bibrangedash 4186}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.18653/v1/N19-1423
+      \endverb
+      \verb{urlraw}
+      \verb https://aclanthology.org/N19-1423/
+      \endverb
+      \verb{url}
+      \verb https://aclanthology.org/N19-1423/
+      \endverb
+    \endentry
+    \entry{lin2022uncertainty}{misc}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=00fd40e4b8f963e9edd28ee849b64ef0}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Stephanie},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9e4edc142b0564cbbb1cf93a401e4434}{%
+           family={Hilton},
+           familyi={H\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6b07bfe62c5870808c4d460a3275f391}{%
+           family={Evans},
+           familyi={E\bibinitperiod},
+           given={Owain},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3be27770c900ce3f287decb97963365c}
+      \strng{fullhash}{5859ef73d57f8294b3d2194eec5bbd72}
+      \strng{fullhashraw}{5859ef73d57f8294b3d2194eec5bbd72}
+      \strng{bibnamehash}{5859ef73d57f8294b3d2194eec5bbd72}
+      \strng{authorbibnamehash}{5859ef73d57f8294b3d2194eec5bbd72}
+      \strng{authornamehash}{3be27770c900ce3f287decb97963365c}
+      \strng{authorfullhash}{5859ef73d57f8294b3d2194eec5bbd72}
+      \strng{authorfullhashraw}{5859ef73d57f8294b3d2194eec5bbd72}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{title}{Teaching Models to Express Their Uncertainty in Words}
+      \field{year}{2022}
+      \verb{eprint}
+      \verb 2205.14334
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2205.14334
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2205.14334
+      \endverb
+    \endentry
+    \entry{paragonAbout}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f4ba0ae1831c47f8cf10c3abe2537c83}{%
+           family={{PT Paragon Technology and Innovation}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{fullhash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{fullhashraw}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{bibnamehash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{authorbibnamehash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{authornamehash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{authorfullhash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{authorfullhashraw}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \field{extraname}{1}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{About Paragon}
+      \field{urlday}{24}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.paragon-innovation.com/about-us/1000
+      \endverb
+      \verb{url}
+      \verb https://www.paragon-innovation.com/about-us/1000
+      \endverb
+    \endentry
+    \entry{paragonLookLab2022}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f4ba0ae1831c47f8cf10c3abe2537c83}{%
+           family={{PT Paragon Technology and Innovation}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{fullhash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{fullhashraw}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{bibnamehash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{authorbibnamehash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{authornamehash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{authorfullhash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{authorfullhashraw}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \field{extraname}{2}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Paragon Launched LookLab: Beauty Lifestyle Store in Indonesia}
+      \field{urlday}{24}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.paragon-innovation.com/post/news/yBHKiwOyoCdBxis
+      \endverb
+      \verb{url}
+      \verb https://www.paragon-innovation.com/post/news/yBHKiwOyoCdBxis
+      \endverb
+    \endentry
+    \entry{paragonIHYA2023}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f4ba0ae1831c47f8cf10c3abe2537c83}{%
+           family={{PT Paragon Technology and Innovation}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{fullhash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{fullhashraw}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{bibnamehash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{authorbibnamehash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{authornamehash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{authorfullhash}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \strng{authorfullhashraw}{f4ba0ae1831c47f8cf10c3abe2537c83}
+      \field{extraname}{3}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Paragon Won Again, Received 3 Awards at Indonesia Halal Industry Awards 2023}
+      \field{urlday}{24}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.paragon-innovation.com/post/news/6e4fyM4GUGW07MJ
+      \endverb
+      \verb{url}
+      \verb https://www.paragon-innovation.com/post/news/6e4fyM4GUGW07MJ
+      \endverb
+    \endentry
+    \entry{libur2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9ca2f2625f1297d7f2100d5ad80948eb}{%
+           family={{Sekretariat Negara Republik Indonesia}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{9ca2f2625f1297d7f2100d5ad80948eb}
+      \strng{fullhash}{9ca2f2625f1297d7f2100d5ad80948eb}
+      \strng{fullhashraw}{9ca2f2625f1297d7f2100d5ad80948eb}
+      \strng{bibnamehash}{9ca2f2625f1297d7f2100d5ad80948eb}
+      \strng{authorbibnamehash}{9ca2f2625f1297d7f2100d5ad80948eb}
+      \strng{authornamehash}{9ca2f2625f1297d7f2100d5ad80948eb}
+      \strng{authorfullhash}{9ca2f2625f1297d7f2100d5ad80948eb}
+      \strng{authorfullhashraw}{9ca2f2625f1297d7f2100d5ad80948eb}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Inilah SKB 3 Menteri Libur Nasional dan Cuti Bersama 2026}
+      \field{urlday}{24}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026
+      \endverb
+      \verb{url}
+      \verb https://www.setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

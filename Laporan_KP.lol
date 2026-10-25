@@ -1,1 +1,1 @@
-\contentsline {lstlisting}{\numberline {III.1}{\ignorespaces Cuplikan prompt utama untuk klasifikasi WHT}}{20}{lstlisting.3.1}%
+\contentsline {lstlisting}{\numberline {III.1}{\ignorespaces Cuplikan instruksi utama untuk klasifikasi WHT}}{16}{lstlisting.3.1}%

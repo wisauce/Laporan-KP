@@ -35,10 +35,11 @@
 % ----------------------------------------------------------------
 \RequirePackage[utf8]{inputenc}     % for UTF-8 encoding
 \RequirePackage{fontspec}           % for font selection
-\RequirePackage[indonesian]{babel}  % untuk bahasa Indonesia
+\RequirePackage[english,main=indonesian]{babel}  % bahasa utama Indonesia; Inggris untuk sitasi APA
 \RequirePackage{csquotes}           % for context-sensitive quotation facilities
 \RequirePackage{setspace}           % for line spacing
 \RequirePackage{graphicx}           % for images
+\RequirePackage{xurl}               % pemenggalan URL panjang pada daftar pustaka
 \RequirePackage{caption}            % for customizing captions
 \RequirePackage{subcaption}         % for sub-figures
 \RequirePackage{hyperref}           % for hyperlinks
@@ -70,6 +71,7 @@
     language=english,
     autolang=other
 ]{biblatex} % for bibliography management with APA style
+\DeclareLanguageMapping{indonesian}{english-apa} % fallback APA saat lokalisasi Indonesia tidak tersedia
 
 % ==========================================
 % PENGATURAN DOKUMEN

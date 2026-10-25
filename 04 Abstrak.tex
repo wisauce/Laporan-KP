@@ -3,7 +3,7 @@
 
 \begin{center}
 
-    \textbf{Pengembangan Sistem Koreksi Tarif Pajak Penghasilan Berbasis AI pada Web Tukar Faktur di PT Paragon Technology and Innovation } \\
+    \textbf{Pengembangan Sistem Koreksi Tarif Pajak Penghasilan Berbasis AI pada Web Tukar Faktur di PT Paragon Technology and Innovation} \\
     \vspace{0.4cm}
     oleh \\
     \vspace{0.4cm}
@@ -13,17 +13,9 @@
 
 
 \begin{spacing}{1.0}
-PT Paragon Technology and Innovation sebagai perusahaan manufaktur dan distribusi produk kecantikan memiliki proses pengadaan barang dan jasa yang kompleks, termasuk pemenuhan kewajiban perpajakan melalui pemotongan Pajak Penghasilan (PPh).
-Penentuan tarif PPh pada transaksi pembelian bergantung pada pemetaan sejumlah atribut, salah satunya jenis material.
-Variasi jenis material yang sangat banyak dan sulit dipahami oleh pengguna menyebabkan kesalahan pemilihan material saat pembuatan \textit{Purchase Order} (PO), sehingga tarif pajak yang tercatat menjadi tidak sesuai.
-Ketidaksesuaian ini berpotensi menimbulkan kerugian finansial berupa selisih pemotongan pajak, biaya koreksi transaksi, penundaan pembayaran, serta risiko sanksi akibat ketidakpatuhan perpajakan.
-Perbaikan langsung pada proses pembuatan PO sulit dilakukan karena berada di luar cakupan kerja divisi penulis dan memerlukan perubahan cara kerja lintas unit yang signifikan.
-Untuk mengatasi permasalahan tersebut, penulis mengembangkan Sistem Koreksi Tarif Pajak Penghasilan Berbasis Akal Imitasi (AI) pada \textit{Web Tukar Faktur} sebagai alternatif yang dapat mendeteksi dan mengoreksi ketidaksesuaian tarif PPh tanpa mengubah alur pembuatan PO.
-Kerja praktik dilaksanakan di PT Paragon Technology and Innovation, salah satu perusahaan terbesar di industri kecantikan nasional dengan tingkat kematangan teknologi yang tergolong matang sekaligus sedang berkembang pesat, sebagai \textit{software engineer intern} dengan pendekatan pengembangan perangkat lunak yang meliputi analisis kebutuhan, perancangan arsitektur sistem, implementasi \textit{backend}, integrasi layanan AI untuk ekstraksi dan analisis dokumen faktur, serta pengujian fungsional.
-Sistem yang dikembangkan menerima data faktur beserta konteks transaksi, membandingkan tarif PPh yang tercatat dengan rekomendasi berbasis aturan dan AI, lalu memberikan hasil koreksi yang dapat digunakan pada proses pertukaran faktur.
-Hasil kerja praktik menunjukkan bahwa solusi berbasis AI mampu membantu mengurangi risiko kesalahan tarif PPh akibat pemilihan material yang keliru, sekaligus memberikan pengalaman pengembangan sistem informasi terintegrasi di lingkungan perusahaan.
+Web Tukar Faktur digunakan untuk memeriksa faktur pemasok sebelum transaksi dicatat dalam SAP. Pada proses pengadaan, pengguna memilih \textit{material group} sebagai kelompok barang atau jasa. Pilihan yang tidak sesuai dengan transaksi dapat menyebabkan kode pemotongan PPh atau kode WHT \textit{Witholding Tax} pada SAP tidak sesuai dengan isi faktur. Ketidaksesuaian tersebut harus diperiksa dan dikoreksi secara manual oleh tim \textit{Account Payable}. Rumusan masalah kerja praktik ini adalah bagaimana membantu tim \textit{Account Payable} mengidentifikasi ketidaksesuaian kode WHT pada tahap pertukaran faktur tanpa mengubah proses pengadaan yang berada di luar kewenangan tim Web Tukar Faktur. Tujuannya adalah mengembangkan sistem koreksi kode WHT berbasis AI pada Web Tukar Faktur. Sistem mengekstraksi teks dari faktur menggunakan OCR, kemudian menggunakan nama item pada pesanan pembelian, teks faktur, dan kandidat kode yang telah disaring sebagai masukan bagi LLM untuk menilai objek pajak transaksi. Dari jenis objek pajak yang teridentifikasi, sistem akan menghasilkan rekomendasi kode WHT, alasannya, serta skor keyakinan untuk setiap item. Hasil rekomendasi yang berbeda dengan kode SAP, memiliki skor keyakinan rendah, atau didasarkan pada informasi yang tidak lengkap tetap diarahkan kepada tim \textit{Account Payable} untuk diperiksa. Hasil kerja praktik berupa sistem yang terdiri dari subsistem ekstraksi faktur dan subsistem klasifikasi objek pajak yang telah digunakan dalam proses operasional.
 
-Kata kunci: akal imitasi, \textit{large language model}, pajak penghasilan, \textit{Purchase Order}, \textit{Enterprise Resource Planning}
+Kata kunci: \textit{artificial intelligence}, \textit{large language model}, perpajakan, faktur
 
 \end{spacing}
 

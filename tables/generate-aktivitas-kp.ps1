@@ -30,7 +30,12 @@ $monthNames = @('', 'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Jul
 $rows = Import-Csv -LiteralPath $Source -Encoding UTF8 | ForEach-Object {
     $date = [datetime]::ParseExact($_.Tanggal, 'M/d/yyyy', [cultureinfo]::InvariantCulture)
     if ($date -ge $startDate -and $date -le $endDate) {
-        [pscustomobject]@{ Date = $date; Activity = $_.Aktivitas }
+        $activity = $_.Aktivitas
+        # CSV menyebut "Libur Imlek" pada 16 Juni; kalender resmi menyebut Tahun Baru Islam.
+        if ($date -eq [datetime]::new(2026, 6, 16) -and $activity.Trim() -eq '- Libur Imlek') {
+            $activity = '- Libur Tahun Baru Islam 1448 H'
+        }
+        [pscustomobject]@{ Date = $date; Activity = $activity }
     }
 } | Sort-Object Date
 
